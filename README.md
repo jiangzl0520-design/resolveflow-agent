@@ -78,10 +78,10 @@ python -m venv .venv
 ### 运行测试
 
 ```powershell
-.\.venv\Scripts\python.exe -m pytest -W error
+.\.venv\Scripts\python.exe -m pytest
 ```
 
-这条命令运行全部自动化测试，并把运行时警告当成错误，避免忽略依赖弃用问题。
+这条命令运行全部自动化测试。`pyproject.toml` 会把警告当成错误，同时只精确忽略 FastAPI/Starlette 当前触发的一条 AnyIO 第三方兼容性弃用警告，避免掩盖项目自身的新警告。
 
 ### 启动 PostgreSQL 和 Redis
 
@@ -97,7 +97,7 @@ Compose 启动 PostgreSQL 和 Redis；Alembic 再把数据库升级到代码要�
 
 ```powershell
 $env:TEST_DATABASE_URL="postgresql+psycopg://resolveflow:resolveflow@localhost:5432/resolveflow_test"
-.\.venv\Scripts\python.exe -m pytest -W error -m postgres
+.\.venv\Scripts\python.exe -m pytest -m postgres
 ```
 
 测试会拒绝数据库名不以 `_test` 结尾的连接地址，避免误连普通开发库或生产库。

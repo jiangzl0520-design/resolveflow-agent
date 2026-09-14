@@ -127,7 +127,7 @@ $env:TEST_DATABASE_URL = `
 新增 `tests/test_token_counter.py`，覆盖目标编码可用、未知模型回退编码下载失败、已知模型编码加载失败和中文 UTF-8 字节上界。原本会因 `openaipublic.blob.core.windows.net` TLS/网络故障中断的跨 Agent Run Memory 场景也纳入回归。
 
 ```powershell
-.\.venv\Scripts\python.exe -m pytest -W error
+.\.venv\Scripts\python.exe -m pytest
 ```
 
 结果：
@@ -137,3 +137,5 @@ $env:TEST_DATABASE_URL = `
 ```
 
 15 项跳过项需要显式配置 PostgreSQL 等集成测试环境；本轮没有把它们误报为通过。另修复 API Memory 测试使用固定到期日期导致随日历失效的问题，过期 Memory 的确定性边界测试仍保留在 `tests/test_long_term_memory.py`。
+
+GitHub 首次在 Linux 新环境中运行时，Starlette 导入 AnyIO 旧别名触发第三方 `DeprecationWarning`，导致严格警告策略在测试收集前退出。`pyproject.toml` 现在统一将警告设为错误，并只按完整消息精确忽略这一条已知上游兼容性警告；CI 与本地都直接执行 `pytest`，防止命令行 `-W error` 覆盖精确豁免。

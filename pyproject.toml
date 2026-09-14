@@ -36,6 +36,10 @@ dev = [
 [tool.pytest.ini_options]
 addopts = "-q --basetemp=.pytest_tmp"
 testpaths = ["tests"]
+filterwarnings = [
+    "error",
+    'ignore:The anyio\.abc\.BlockingPortal alias is deprecated, use anyio\.from_thread\.BlockingPortal instead\.:DeprecationWarning',
+]
 markers = [
     "postgres: requires a real PostgreSQL database",
 ]
