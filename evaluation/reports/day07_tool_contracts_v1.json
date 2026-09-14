@@ -1,0 +1,44 @@
+{
+  "report_id": "day07-tool-contracts-v1",
+  "dataset": {
+    "dataset_id": "day07-tool-contracts-v1",
+    "description": "Synthetic tool calls for contract enforcement and failure classification.",
+    "synthetic": true,
+    "case_count": 30
+  },
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "provider": "InMemoryAfterSalesDataSource",
+    "paid_api_calls": 0
+  },
+  "untyped_generic_dispatch_baseline": {
+    "exact_outcome_classifications": 10,
+    "unauthorized_cases_reaching_handler": 3,
+    "invalid_argument_cases_reaching_handler": 2,
+    "timeout_cases_not_detected": 3,
+    "failure_vocabulary": [
+      "generic_error"
+    ]
+  },
+  "resolveflow_tool_executor": {
+    "exact_outcome_classifications": 30,
+    "unauthorized_cases_reaching_handler": 0,
+    "invalid_argument_cases_reaching_handler": 0,
+    "timeout_cases_detected": 3,
+    "failure_vocabulary": [
+      "argument_error",
+      "authorization_error",
+      "dependency_error",
+      "resource_error",
+      "selection_error",
+      "timeout_error"
+    ]
+  },
+  "interpretation_limits": [
+    "All calls, data, failures, and timing are synthetic.",
+    "This evaluates the tool execution boundary, not an LLM's tool-selection accuracy.",
+    "The baseline is an intentionally untyped generic dispatcher without permission or timeout gates.",
+    "No production latency, task success, or business savings are claimed."
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "dataset_id": "day13-hybrid-retrieval-v1",
+  "synthetic": true,
+  "description": "Deterministic retrieval cases that isolate keyword-only, semantic-only, and dual-channel evidence, plus tenant, role, and effective-time isolation.",
+  "repetitions_per_query_type": 2,
+  "top_k": 5,
+  "policies": [
+    {
+      "concept": "delivery_proof",
+      "code": "RF-K001",
+      "title": "签收证明核验",
+      "keyword_text": "签收证明必须包含承运商、签收时间和交付位置。",
+      "semantic_alias": "快递员把东西交到哪里的凭据"
+    },
+    {
+      "concept": "duplicate_refund",
+      "code": "RF-K002",
+      "title": "重复退款防护",
+      "keyword_text": "退款前必须查询退款状态，禁止重复退款。",
+      "semantic_alias": "先看看这笔钱是不是已经退过了"
+    },
+    {
+      "concept": "refund_approval",
+      "code": "RF-K003",
+      "title": "退款人工审批",
+      "keyword_text": "高风险退款必须完成人工审核后才能执行。",
+      "semantic_alias": "这笔售后款需要主管点头才可以操作"
+    },
+    {
+      "concept": "unpaid_cancel",
+      "code": "RF-K004",
+      "title": "未付款订单取消",
+      "keyword_text": "未付款订单取消后不得进入退款流程。",
+      "semantic_alias": "没付钱的单子后来作废了该怎么结束"
+    },
+    {
+      "concept": "identity_change",
+      "code": "RF-K005",
+      "title": "订单身份变化",
+      "keyword_text": "订单号变更后旧订单证据失效，必须重新调查。",
+      "semantic_alias": "客户改了单号后要不要从头查一遍"
+    },
+    {
+      "concept": "proof_timeout",
+      "code": "RF-K006",
+      "title": "签收证明超时",
+      "keyword_text": "签收证明查询超时不等于证明不存在。",
+      "semantic_alias": "快递凭据接口一直没回应代表什么"
+    },
+    {
+      "concept": "evidence_conflict",
+      "code": "RF-K007",
+      "title": "证据冲突升级",
+      "keyword_text": "证据冲突时必须停止自动退款并升级处理。",
+      "semantic_alias": "系统说收到了但客人说根本没拿到"
+    },
+    {
+      "concept": "refund_limit",
+      "code": "RF-K008",
+      "title": "退款金额上限",
+      "keyword_text": "退款金额超过自动处理上限时必须转人工。",
+      "semantic_alias": "赔多少钱开始超出机器可以决定的范围"
+    },
+    {
+      "concept": "evidence_freshness",
+      "code": "RF-K009",
+      "title": "证据新鲜度",
+      "keyword_text": "超过证据有效期的物流结果不得支持退款决定。",
+      "semantic_alias": "很久以前查到的配送情况现在还能不能用"
+    },
+    {
+      "concept": "manual_takeover",
+      "code": "RF-K010",
+      "title": "人工接管",
+      "keyword_text": "自动调查无法形成可靠结论时需要人工接管。",
+      "semantic_alias": "机器人卡住并且无法判断时交给客服处理"
+    }
+  ],
+  "security_scenario_counts": {
+    "other_tenant": 10,
+    "supervisor_only": 10,
+    "expired": 5,
+    "future": 5
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "dataset_id": "day11-mcp-interoperability-v1",
+  "synthetic": true,
+  "description": "Deterministic MCP interoperability, authorization, contract drift, and circuit-breaker cases.",
+  "scenario_counts": {
+    "local_remote_parity": 30,
+    "unauthorized_or_cross_tenant": 10,
+    "contract_drift": 10,
+    "dependency_outage": 10
+  },
+  "circuit_failure_threshold": 3,
+  "circuit_recovery_seconds": 5
+}

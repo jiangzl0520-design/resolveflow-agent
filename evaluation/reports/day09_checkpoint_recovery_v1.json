@@ -1,0 +1,55 @@
+{
+  "report_id": "day09-checkpoint-recovery-v1",
+  "dataset": {
+    "dataset_id": "day09-checkpoint-recovery-v1",
+    "description": "Synthetic process-restart cases comparing full re-execution with checkpoint resume after the first successful tool.",
+    "synthetic": true,
+    "scenario_counts": {
+      "cancelled_order": 15,
+      "delivered_with_proof": 15
+    },
+    "interruption_point": "after_first_successful_order_lookup",
+    "expected_outcomes": {
+      "cancelled_order": "no_refundable_payment",
+      "delivered_with_proof": "human_review_required"
+    },
+    "case_count": 30
+  },
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "langgraph": "1.2.9",
+    "checkpointer": "InMemorySaver for deterministic evaluation",
+    "planner": "deterministic_observation_driven",
+    "paid_api_calls": 0
+  },
+  "restart_from_scratch_baseline": {
+    "correct_outcomes": 30,
+    "exact_checkpoint_resumes": 0,
+    "tool_calls": 90,
+    "duplicate_pre_restart_tool_calls": 30
+  },
+  "resolveflow_langgraph_checkpoint": {
+    "correct_outcomes": 30,
+    "exact_checkpoint_resumes": 30,
+    "tool_calls": 60,
+    "duplicate_pre_restart_tool_calls": 0,
+    "minimum_checkpoints_per_run": 8
+  },
+  "measured_delta": {
+    "tool_calls_avoided": 30,
+    "tool_call_reduction_percent": 33.33,
+    "duplicate_checkpointed_call_reduction": 30
+  },
+  "durability_evidence": {
+    "postgres_runtime_recreation_test": "tests/test_agent_workflow.py::test_postgres_checkpoint_survives_runtime_recreation",
+    "postgres_test_is_separate_from_this_offline_report": true
+  },
+  "interpretation_limits": [
+    "All business facts, interruptions, and planner decisions are synthetic.",
+    "The offline comparison uses InMemorySaver so it is deterministic and does not claim storage durability.",
+    "A separate PostgreSQL integration test proves runtime recreation against a durable checkpointer.",
+    "This measures avoided repeated tool execution after a saved checkpoint, not production revenue or latency.",
+    "A side effect that succeeds before its checkpoint is committed still requires an idempotency key; Day10 write tools must enforce that separately."
+  ]
+}

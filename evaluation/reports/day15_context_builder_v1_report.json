@@ -1,0 +1,2082 @@
+{
+  "dataset": {
+    "id": "day15-context-builder-v1",
+    "synthetic": true,
+    "case_count": 60,
+    "path": "C:\\Users\\16696\\Documents\\agent初始阶段学习\\resolveflow_agent\\evaluation\\datasets\\day15_context_builder_v1.json"
+  },
+  "runtime": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "tokenizer": "tiktoken-0.13.0/o200k_base-fallback",
+    "model": "gpt-5.6-terra",
+    "input_budget_tokens": 900,
+    "paid_model_calls": 0
+  },
+  "baseline": {
+    "case_count": 60,
+    "critical_fragment_retention_percent": 66.67,
+    "stale_fragment_selections": 40,
+    "dynamic_tool_precision_percent": 33.33,
+    "average_input_tokens": 463.67
+  },
+  "context_builder": {
+    "case_count": 60,
+    "critical_fragment_retention_percent": 100.0,
+    "stale_fragment_selections": 0,
+    "dynamic_tool_precision_percent": 100.0,
+    "average_input_tokens": 370.35
+  },
+  "measured_value": {
+    "critical_retention_lift_points": 33.33,
+    "stale_selections_removed": 40,
+    "tool_precision_lift_points": 66.67,
+    "average_input_token_change_percent": -20.13
+  },
+  "raw_results": {
+    "baseline": [
+      {
+        "case_id": "long-00",
+        "scenario": "long_history",
+        "critical_retained": false,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 896,
+        "selected_fragment_ids": [
+          "long-00:correction",
+          "long-00:evidence",
+          "long-00:history:12",
+          "long-00:history:13",
+          "long-00:history:14",
+          "long-00:history:15",
+          "long-00:history:16",
+          "long-00:history:17",
+          "long-00:system"
+        ]
+      },
+      {
+        "case_id": "long-01",
+        "scenario": "long_history",
+        "critical_retained": false,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 896,
+        "selected_fragment_ids": [
+          "long-01:correction",
+          "long-01:evidence",
+          "long-01:history:12",
+          "long-01:history:13",
+          "long-01:history:14",
+          "long-01:history:15",
+          "long-01:history:16",
+          "long-01:history:17",
+          "long-01:system"
+        ]
+      },
+      {
+        "case_id": "long-02",
+        "scenario": "long_history",
+        "critical_retained": false,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 896,
+        "selected_fragment_ids": [
+          "long-02:correction",
+          "long-02:evidence",
+          "long-02:history:12",
+          "long-02:history:13",
+          "long-02:history:14",
+          "long-02:history:15",
+          "long-02:history:16",
+          "long-02:history:17",
+          "long-02:system"
+        ]
+      },
+      {
+        "case_id": "long-03",
+        "scenario": "long_history",
+        "critical_retained": false,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 896,
+        "selected_fragment_ids": [
+          "long-03:correction",
+          "long-03:evidence",
+          "long-03:history:12",
+          "long-03:history:13",
+          "long-03:history:14",
+          "long-03:history:15",
+          "long-03:history:16",
+          "long-03:history:17",
+          "long-03:system"
+        ]
+      },
+      {
+        "case_id": "long-04",
+        "scenario": "long_history",
+        "critical_retained": false,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 896,
+        "selected_fragment_ids": [
+          "long-04:correction",
+          "long-04:evidence",
+          "long-04:history:12",
+          "long-04:history:13",
+          "long-04:history:14",
+          "long-04:history:15",
+          "long-04:history:16",
+          "long-04:history:17",
+          "long-04:system"
+        ]
+      },
+      {
+        "case_id": "long-05",
+        "scenario": "long_history",
+        "critical_retained": false,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 896,
+        "selected_fragment_ids": [
+          "long-05:correction",
+          "long-05:evidence",
+          "long-05:history:12",
+          "long-05:history:13",
+          "long-05:history:14",
+          "long-05:history:15",
+          "long-05:history:16",
+          "long-05:history:17",
+          "long-05:system"
+        ]
+      },
+      {
+        "case_id": "long-06",
+        "scenario": "long_history",
+        "critical_retained": false,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 896,
+        "selected_fragment_ids": [
+          "long-06:correction",
+          "long-06:evidence",
+          "long-06:history:12",
+          "long-06:history:13",
+          "long-06:history:14",
+          "long-06:history:15",
+          "long-06:history:16",
+          "long-06:history:17",
+          "long-06:system"
+        ]
+      },
+      {
+        "case_id": "long-07",
+        "scenario": "long_history",
+        "critical_retained": false,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 896,
+        "selected_fragment_ids": [
+          "long-07:correction",
+          "long-07:evidence",
+          "long-07:history:12",
+          "long-07:history:13",
+          "long-07:history:14",
+          "long-07:history:15",
+          "long-07:history:16",
+          "long-07:history:17",
+          "long-07:system"
+        ]
+      },
+      {
+        "case_id": "long-08",
+        "scenario": "long_history",
+        "critical_retained": false,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 896,
+        "selected_fragment_ids": [
+          "long-08:correction",
+          "long-08:evidence",
+          "long-08:history:12",
+          "long-08:history:13",
+          "long-08:history:14",
+          "long-08:history:15",
+          "long-08:history:16",
+          "long-08:history:17",
+          "long-08:system"
+        ]
+      },
+      {
+        "case_id": "long-09",
+        "scenario": "long_history",
+        "critical_retained": false,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 896,
+        "selected_fragment_ids": [
+          "long-09:correction",
+          "long-09:evidence",
+          "long-09:history:12",
+          "long-09:history:13",
+          "long-09:history:14",
+          "long-09:history:15",
+          "long-09:history:16",
+          "long-09:history:17",
+          "long-09:system"
+        ]
+      },
+      {
+        "case_id": "long-10",
+        "scenario": "long_history",
+        "critical_retained": false,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 896,
+        "selected_fragment_ids": [
+          "long-10:correction",
+          "long-10:evidence",
+          "long-10:history:12",
+          "long-10:history:13",
+          "long-10:history:14",
+          "long-10:history:15",
+          "long-10:history:16",
+          "long-10:history:17",
+          "long-10:system"
+        ]
+      },
+      {
+        "case_id": "long-11",
+        "scenario": "long_history",
+        "critical_retained": false,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 896,
+        "selected_fragment_ids": [
+          "long-11:correction",
+          "long-11:evidence",
+          "long-11:history:12",
+          "long-11:history:13",
+          "long-11:history:14",
+          "long-11:history:15",
+          "long-11:history:16",
+          "long-11:history:17",
+          "long-11:system"
+        ]
+      },
+      {
+        "case_id": "long-12",
+        "scenario": "long_history",
+        "critical_retained": false,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 896,
+        "selected_fragment_ids": [
+          "long-12:correction",
+          "long-12:evidence",
+          "long-12:history:12",
+          "long-12:history:13",
+          "long-12:history:14",
+          "long-12:history:15",
+          "long-12:history:16",
+          "long-12:history:17",
+          "long-12:system"
+        ]
+      },
+      {
+        "case_id": "long-13",
+        "scenario": "long_history",
+        "critical_retained": false,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 896,
+        "selected_fragment_ids": [
+          "long-13:correction",
+          "long-13:evidence",
+          "long-13:history:12",
+          "long-13:history:13",
+          "long-13:history:14",
+          "long-13:history:15",
+          "long-13:history:16",
+          "long-13:history:17",
+          "long-13:system"
+        ]
+      },
+      {
+        "case_id": "long-14",
+        "scenario": "long_history",
+        "critical_retained": false,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 896,
+        "selected_fragment_ids": [
+          "long-14:correction",
+          "long-14:evidence",
+          "long-14:history:12",
+          "long-14:history:13",
+          "long-14:history:14",
+          "long-14:history:15",
+          "long-14:history:16",
+          "long-14:history:17",
+          "long-14:system"
+        ]
+      },
+      {
+        "case_id": "long-15",
+        "scenario": "long_history",
+        "critical_retained": false,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 896,
+        "selected_fragment_ids": [
+          "long-15:correction",
+          "long-15:evidence",
+          "long-15:history:12",
+          "long-15:history:13",
+          "long-15:history:14",
+          "long-15:history:15",
+          "long-15:history:16",
+          "long-15:history:17",
+          "long-15:system"
+        ]
+      },
+      {
+        "case_id": "long-16",
+        "scenario": "long_history",
+        "critical_retained": false,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 896,
+        "selected_fragment_ids": [
+          "long-16:correction",
+          "long-16:evidence",
+          "long-16:history:12",
+          "long-16:history:13",
+          "long-16:history:14",
+          "long-16:history:15",
+          "long-16:history:16",
+          "long-16:history:17",
+          "long-16:system"
+        ]
+      },
+      {
+        "case_id": "long-17",
+        "scenario": "long_history",
+        "critical_retained": false,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 896,
+        "selected_fragment_ids": [
+          "long-17:correction",
+          "long-17:evidence",
+          "long-17:history:12",
+          "long-17:history:13",
+          "long-17:history:14",
+          "long-17:history:15",
+          "long-17:history:16",
+          "long-17:history:17",
+          "long-17:system"
+        ]
+      },
+      {
+        "case_id": "long-18",
+        "scenario": "long_history",
+        "critical_retained": false,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 896,
+        "selected_fragment_ids": [
+          "long-18:correction",
+          "long-18:evidence",
+          "long-18:history:12",
+          "long-18:history:13",
+          "long-18:history:14",
+          "long-18:history:15",
+          "long-18:history:16",
+          "long-18:history:17",
+          "long-18:system"
+        ]
+      },
+      {
+        "case_id": "long-19",
+        "scenario": "long_history",
+        "critical_retained": false,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 896,
+        "selected_fragment_ids": [
+          "long-19:correction",
+          "long-19:evidence",
+          "long-19:history:12",
+          "long-19:history:13",
+          "long-19:history:14",
+          "long-19:history:15",
+          "long-19:history:16",
+          "long-19:history:17",
+          "long-19:system"
+        ]
+      },
+      {
+        "case_id": "correction-00",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 2,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 270,
+        "selected_fragment_ids": [
+          "correction-00:current-evidence",
+          "correction-00:goal",
+          "correction-00:latest",
+          "correction-00:old",
+          "correction-00:stale-evidence",
+          "correction-00:system"
+        ]
+      },
+      {
+        "case_id": "correction-01",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 2,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 270,
+        "selected_fragment_ids": [
+          "correction-01:current-evidence",
+          "correction-01:goal",
+          "correction-01:latest",
+          "correction-01:old",
+          "correction-01:stale-evidence",
+          "correction-01:system"
+        ]
+      },
+      {
+        "case_id": "correction-02",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 2,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 270,
+        "selected_fragment_ids": [
+          "correction-02:current-evidence",
+          "correction-02:goal",
+          "correction-02:latest",
+          "correction-02:old",
+          "correction-02:stale-evidence",
+          "correction-02:system"
+        ]
+      },
+      {
+        "case_id": "correction-03",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 2,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 270,
+        "selected_fragment_ids": [
+          "correction-03:current-evidence",
+          "correction-03:goal",
+          "correction-03:latest",
+          "correction-03:old",
+          "correction-03:stale-evidence",
+          "correction-03:system"
+        ]
+      },
+      {
+        "case_id": "correction-04",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 2,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 270,
+        "selected_fragment_ids": [
+          "correction-04:current-evidence",
+          "correction-04:goal",
+          "correction-04:latest",
+          "correction-04:old",
+          "correction-04:stale-evidence",
+          "correction-04:system"
+        ]
+      },
+      {
+        "case_id": "correction-05",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 2,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 270,
+        "selected_fragment_ids": [
+          "correction-05:current-evidence",
+          "correction-05:goal",
+          "correction-05:latest",
+          "correction-05:old",
+          "correction-05:stale-evidence",
+          "correction-05:system"
+        ]
+      },
+      {
+        "case_id": "correction-06",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 2,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 270,
+        "selected_fragment_ids": [
+          "correction-06:current-evidence",
+          "correction-06:goal",
+          "correction-06:latest",
+          "correction-06:old",
+          "correction-06:stale-evidence",
+          "correction-06:system"
+        ]
+      },
+      {
+        "case_id": "correction-07",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 2,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 270,
+        "selected_fragment_ids": [
+          "correction-07:current-evidence",
+          "correction-07:goal",
+          "correction-07:latest",
+          "correction-07:old",
+          "correction-07:stale-evidence",
+          "correction-07:system"
+        ]
+      },
+      {
+        "case_id": "correction-08",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 2,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 270,
+        "selected_fragment_ids": [
+          "correction-08:current-evidence",
+          "correction-08:goal",
+          "correction-08:latest",
+          "correction-08:old",
+          "correction-08:stale-evidence",
+          "correction-08:system"
+        ]
+      },
+      {
+        "case_id": "correction-09",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 2,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 270,
+        "selected_fragment_ids": [
+          "correction-09:current-evidence",
+          "correction-09:goal",
+          "correction-09:latest",
+          "correction-09:old",
+          "correction-09:stale-evidence",
+          "correction-09:system"
+        ]
+      },
+      {
+        "case_id": "correction-10",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 2,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 270,
+        "selected_fragment_ids": [
+          "correction-10:current-evidence",
+          "correction-10:goal",
+          "correction-10:latest",
+          "correction-10:old",
+          "correction-10:stale-evidence",
+          "correction-10:system"
+        ]
+      },
+      {
+        "case_id": "correction-11",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 2,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 270,
+        "selected_fragment_ids": [
+          "correction-11:current-evidence",
+          "correction-11:goal",
+          "correction-11:latest",
+          "correction-11:old",
+          "correction-11:stale-evidence",
+          "correction-11:system"
+        ]
+      },
+      {
+        "case_id": "correction-12",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 2,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 270,
+        "selected_fragment_ids": [
+          "correction-12:current-evidence",
+          "correction-12:goal",
+          "correction-12:latest",
+          "correction-12:old",
+          "correction-12:stale-evidence",
+          "correction-12:system"
+        ]
+      },
+      {
+        "case_id": "correction-13",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 2,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 270,
+        "selected_fragment_ids": [
+          "correction-13:current-evidence",
+          "correction-13:goal",
+          "correction-13:latest",
+          "correction-13:old",
+          "correction-13:stale-evidence",
+          "correction-13:system"
+        ]
+      },
+      {
+        "case_id": "correction-14",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 2,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 270,
+        "selected_fragment_ids": [
+          "correction-14:current-evidence",
+          "correction-14:goal",
+          "correction-14:latest",
+          "correction-14:old",
+          "correction-14:stale-evidence",
+          "correction-14:system"
+        ]
+      },
+      {
+        "case_id": "correction-15",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 2,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 270,
+        "selected_fragment_ids": [
+          "correction-15:current-evidence",
+          "correction-15:goal",
+          "correction-15:latest",
+          "correction-15:old",
+          "correction-15:stale-evidence",
+          "correction-15:system"
+        ]
+      },
+      {
+        "case_id": "correction-16",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 2,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 270,
+        "selected_fragment_ids": [
+          "correction-16:current-evidence",
+          "correction-16:goal",
+          "correction-16:latest",
+          "correction-16:old",
+          "correction-16:stale-evidence",
+          "correction-16:system"
+        ]
+      },
+      {
+        "case_id": "correction-17",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 2,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 270,
+        "selected_fragment_ids": [
+          "correction-17:current-evidence",
+          "correction-17:goal",
+          "correction-17:latest",
+          "correction-17:old",
+          "correction-17:stale-evidence",
+          "correction-17:system"
+        ]
+      },
+      {
+        "case_id": "correction-18",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 2,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 270,
+        "selected_fragment_ids": [
+          "correction-18:current-evidence",
+          "correction-18:goal",
+          "correction-18:latest",
+          "correction-18:old",
+          "correction-18:stale-evidence",
+          "correction-18:system"
+        ]
+      },
+      {
+        "case_id": "correction-19",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 2,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 270,
+        "selected_fragment_ids": [
+          "correction-19:current-evidence",
+          "correction-19:goal",
+          "correction-19:latest",
+          "correction-19:old",
+          "correction-19:stale-evidence",
+          "correction-19:system"
+        ]
+      },
+      {
+        "case_id": "tools-00",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 3,
+        "correct_tools": 1,
+        "input_tokens": 225,
+        "selected_fragment_ids": [
+          "tools-00:goal",
+          "tools-00:system",
+          "tools-00:tool:logistics_lookup",
+          "tools-00:tool:order_lookup",
+          "tools-00:tool:policy_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-01",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 3,
+        "correct_tools": 1,
+        "input_tokens": 225,
+        "selected_fragment_ids": [
+          "tools-01:goal",
+          "tools-01:system",
+          "tools-01:tool:logistics_lookup",
+          "tools-01:tool:order_lookup",
+          "tools-01:tool:policy_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-02",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 3,
+        "correct_tools": 1,
+        "input_tokens": 225,
+        "selected_fragment_ids": [
+          "tools-02:goal",
+          "tools-02:system",
+          "tools-02:tool:logistics_lookup",
+          "tools-02:tool:order_lookup",
+          "tools-02:tool:policy_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-03",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 3,
+        "correct_tools": 1,
+        "input_tokens": 225,
+        "selected_fragment_ids": [
+          "tools-03:goal",
+          "tools-03:system",
+          "tools-03:tool:logistics_lookup",
+          "tools-03:tool:order_lookup",
+          "tools-03:tool:policy_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-04",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 3,
+        "correct_tools": 1,
+        "input_tokens": 225,
+        "selected_fragment_ids": [
+          "tools-04:goal",
+          "tools-04:system",
+          "tools-04:tool:logistics_lookup",
+          "tools-04:tool:order_lookup",
+          "tools-04:tool:policy_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-05",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 3,
+        "correct_tools": 1,
+        "input_tokens": 225,
+        "selected_fragment_ids": [
+          "tools-05:goal",
+          "tools-05:system",
+          "tools-05:tool:logistics_lookup",
+          "tools-05:tool:order_lookup",
+          "tools-05:tool:policy_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-06",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 3,
+        "correct_tools": 1,
+        "input_tokens": 225,
+        "selected_fragment_ids": [
+          "tools-06:goal",
+          "tools-06:system",
+          "tools-06:tool:logistics_lookup",
+          "tools-06:tool:order_lookup",
+          "tools-06:tool:policy_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-07",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 3,
+        "correct_tools": 1,
+        "input_tokens": 225,
+        "selected_fragment_ids": [
+          "tools-07:goal",
+          "tools-07:system",
+          "tools-07:tool:logistics_lookup",
+          "tools-07:tool:order_lookup",
+          "tools-07:tool:policy_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-08",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 3,
+        "correct_tools": 1,
+        "input_tokens": 225,
+        "selected_fragment_ids": [
+          "tools-08:goal",
+          "tools-08:system",
+          "tools-08:tool:logistics_lookup",
+          "tools-08:tool:order_lookup",
+          "tools-08:tool:policy_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-09",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 3,
+        "correct_tools": 1,
+        "input_tokens": 225,
+        "selected_fragment_ids": [
+          "tools-09:goal",
+          "tools-09:system",
+          "tools-09:tool:logistics_lookup",
+          "tools-09:tool:order_lookup",
+          "tools-09:tool:policy_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-10",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 3,
+        "correct_tools": 1,
+        "input_tokens": 225,
+        "selected_fragment_ids": [
+          "tools-10:goal",
+          "tools-10:system",
+          "tools-10:tool:logistics_lookup",
+          "tools-10:tool:order_lookup",
+          "tools-10:tool:policy_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-11",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 3,
+        "correct_tools": 1,
+        "input_tokens": 225,
+        "selected_fragment_ids": [
+          "tools-11:goal",
+          "tools-11:system",
+          "tools-11:tool:logistics_lookup",
+          "tools-11:tool:order_lookup",
+          "tools-11:tool:policy_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-12",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 3,
+        "correct_tools": 1,
+        "input_tokens": 225,
+        "selected_fragment_ids": [
+          "tools-12:goal",
+          "tools-12:system",
+          "tools-12:tool:logistics_lookup",
+          "tools-12:tool:order_lookup",
+          "tools-12:tool:policy_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-13",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 3,
+        "correct_tools": 1,
+        "input_tokens": 225,
+        "selected_fragment_ids": [
+          "tools-13:goal",
+          "tools-13:system",
+          "tools-13:tool:logistics_lookup",
+          "tools-13:tool:order_lookup",
+          "tools-13:tool:policy_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-14",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 3,
+        "correct_tools": 1,
+        "input_tokens": 225,
+        "selected_fragment_ids": [
+          "tools-14:goal",
+          "tools-14:system",
+          "tools-14:tool:logistics_lookup",
+          "tools-14:tool:order_lookup",
+          "tools-14:tool:policy_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-15",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 3,
+        "correct_tools": 1,
+        "input_tokens": 225,
+        "selected_fragment_ids": [
+          "tools-15:goal",
+          "tools-15:system",
+          "tools-15:tool:logistics_lookup",
+          "tools-15:tool:order_lookup",
+          "tools-15:tool:policy_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-16",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 3,
+        "correct_tools": 1,
+        "input_tokens": 225,
+        "selected_fragment_ids": [
+          "tools-16:goal",
+          "tools-16:system",
+          "tools-16:tool:logistics_lookup",
+          "tools-16:tool:order_lookup",
+          "tools-16:tool:policy_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-17",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 3,
+        "correct_tools": 1,
+        "input_tokens": 225,
+        "selected_fragment_ids": [
+          "tools-17:goal",
+          "tools-17:system",
+          "tools-17:tool:logistics_lookup",
+          "tools-17:tool:order_lookup",
+          "tools-17:tool:policy_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-18",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 3,
+        "correct_tools": 1,
+        "input_tokens": 225,
+        "selected_fragment_ids": [
+          "tools-18:goal",
+          "tools-18:system",
+          "tools-18:tool:logistics_lookup",
+          "tools-18:tool:order_lookup",
+          "tools-18:tool:policy_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-19",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 3,
+        "correct_tools": 1,
+        "input_tokens": 225,
+        "selected_fragment_ids": [
+          "tools-19:goal",
+          "tools-19:system",
+          "tools-19:tool:logistics_lookup",
+          "tools-19:tool:order_lookup",
+          "tools-19:tool:policy_lookup"
+        ]
+      }
+    ],
+    "context_builder": [
+      {
+        "case_id": "long-00",
+        "scenario": "long_history",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 811,
+        "selected_fragment_ids": [
+          "long-00:correction",
+          "long-00:evidence",
+          "long-00:goal",
+          "long-00:history:13",
+          "long-00:history:14",
+          "long-00:history:15",
+          "long-00:history:16",
+          "long-00:history:17",
+          "long-00:system"
+        ]
+      },
+      {
+        "case_id": "long-01",
+        "scenario": "long_history",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 811,
+        "selected_fragment_ids": [
+          "long-01:correction",
+          "long-01:evidence",
+          "long-01:goal",
+          "long-01:history:13",
+          "long-01:history:14",
+          "long-01:history:15",
+          "long-01:history:16",
+          "long-01:history:17",
+          "long-01:system"
+        ]
+      },
+      {
+        "case_id": "long-02",
+        "scenario": "long_history",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 811,
+        "selected_fragment_ids": [
+          "long-02:correction",
+          "long-02:evidence",
+          "long-02:goal",
+          "long-02:history:13",
+          "long-02:history:14",
+          "long-02:history:15",
+          "long-02:history:16",
+          "long-02:history:17",
+          "long-02:system"
+        ]
+      },
+      {
+        "case_id": "long-03",
+        "scenario": "long_history",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 811,
+        "selected_fragment_ids": [
+          "long-03:correction",
+          "long-03:evidence",
+          "long-03:goal",
+          "long-03:history:13",
+          "long-03:history:14",
+          "long-03:history:15",
+          "long-03:history:16",
+          "long-03:history:17",
+          "long-03:system"
+        ]
+      },
+      {
+        "case_id": "long-04",
+        "scenario": "long_history",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 811,
+        "selected_fragment_ids": [
+          "long-04:correction",
+          "long-04:evidence",
+          "long-04:goal",
+          "long-04:history:13",
+          "long-04:history:14",
+          "long-04:history:15",
+          "long-04:history:16",
+          "long-04:history:17",
+          "long-04:system"
+        ]
+      },
+      {
+        "case_id": "long-05",
+        "scenario": "long_history",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 811,
+        "selected_fragment_ids": [
+          "long-05:correction",
+          "long-05:evidence",
+          "long-05:goal",
+          "long-05:history:13",
+          "long-05:history:14",
+          "long-05:history:15",
+          "long-05:history:16",
+          "long-05:history:17",
+          "long-05:system"
+        ]
+      },
+      {
+        "case_id": "long-06",
+        "scenario": "long_history",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 811,
+        "selected_fragment_ids": [
+          "long-06:correction",
+          "long-06:evidence",
+          "long-06:goal",
+          "long-06:history:13",
+          "long-06:history:14",
+          "long-06:history:15",
+          "long-06:history:16",
+          "long-06:history:17",
+          "long-06:system"
+        ]
+      },
+      {
+        "case_id": "long-07",
+        "scenario": "long_history",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 811,
+        "selected_fragment_ids": [
+          "long-07:correction",
+          "long-07:evidence",
+          "long-07:goal",
+          "long-07:history:13",
+          "long-07:history:14",
+          "long-07:history:15",
+          "long-07:history:16",
+          "long-07:history:17",
+          "long-07:system"
+        ]
+      },
+      {
+        "case_id": "long-08",
+        "scenario": "long_history",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 811,
+        "selected_fragment_ids": [
+          "long-08:correction",
+          "long-08:evidence",
+          "long-08:goal",
+          "long-08:history:13",
+          "long-08:history:14",
+          "long-08:history:15",
+          "long-08:history:16",
+          "long-08:history:17",
+          "long-08:system"
+        ]
+      },
+      {
+        "case_id": "long-09",
+        "scenario": "long_history",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 811,
+        "selected_fragment_ids": [
+          "long-09:correction",
+          "long-09:evidence",
+          "long-09:goal",
+          "long-09:history:13",
+          "long-09:history:14",
+          "long-09:history:15",
+          "long-09:history:16",
+          "long-09:history:17",
+          "long-09:system"
+        ]
+      },
+      {
+        "case_id": "long-10",
+        "scenario": "long_history",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 811,
+        "selected_fragment_ids": [
+          "long-10:correction",
+          "long-10:evidence",
+          "long-10:goal",
+          "long-10:history:13",
+          "long-10:history:14",
+          "long-10:history:15",
+          "long-10:history:16",
+          "long-10:history:17",
+          "long-10:system"
+        ]
+      },
+      {
+        "case_id": "long-11",
+        "scenario": "long_history",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 811,
+        "selected_fragment_ids": [
+          "long-11:correction",
+          "long-11:evidence",
+          "long-11:goal",
+          "long-11:history:13",
+          "long-11:history:14",
+          "long-11:history:15",
+          "long-11:history:16",
+          "long-11:history:17",
+          "long-11:system"
+        ]
+      },
+      {
+        "case_id": "long-12",
+        "scenario": "long_history",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 811,
+        "selected_fragment_ids": [
+          "long-12:correction",
+          "long-12:evidence",
+          "long-12:goal",
+          "long-12:history:13",
+          "long-12:history:14",
+          "long-12:history:15",
+          "long-12:history:16",
+          "long-12:history:17",
+          "long-12:system"
+        ]
+      },
+      {
+        "case_id": "long-13",
+        "scenario": "long_history",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 811,
+        "selected_fragment_ids": [
+          "long-13:correction",
+          "long-13:evidence",
+          "long-13:goal",
+          "long-13:history:13",
+          "long-13:history:14",
+          "long-13:history:15",
+          "long-13:history:16",
+          "long-13:history:17",
+          "long-13:system"
+        ]
+      },
+      {
+        "case_id": "long-14",
+        "scenario": "long_history",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 811,
+        "selected_fragment_ids": [
+          "long-14:correction",
+          "long-14:evidence",
+          "long-14:goal",
+          "long-14:history:13",
+          "long-14:history:14",
+          "long-14:history:15",
+          "long-14:history:16",
+          "long-14:history:17",
+          "long-14:system"
+        ]
+      },
+      {
+        "case_id": "long-15",
+        "scenario": "long_history",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 811,
+        "selected_fragment_ids": [
+          "long-15:correction",
+          "long-15:evidence",
+          "long-15:goal",
+          "long-15:history:13",
+          "long-15:history:14",
+          "long-15:history:15",
+          "long-15:history:16",
+          "long-15:history:17",
+          "long-15:system"
+        ]
+      },
+      {
+        "case_id": "long-16",
+        "scenario": "long_history",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 811,
+        "selected_fragment_ids": [
+          "long-16:correction",
+          "long-16:evidence",
+          "long-16:goal",
+          "long-16:history:13",
+          "long-16:history:14",
+          "long-16:history:15",
+          "long-16:history:16",
+          "long-16:history:17",
+          "long-16:system"
+        ]
+      },
+      {
+        "case_id": "long-17",
+        "scenario": "long_history",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 811,
+        "selected_fragment_ids": [
+          "long-17:correction",
+          "long-17:evidence",
+          "long-17:goal",
+          "long-17:history:13",
+          "long-17:history:14",
+          "long-17:history:15",
+          "long-17:history:16",
+          "long-17:history:17",
+          "long-17:system"
+        ]
+      },
+      {
+        "case_id": "long-18",
+        "scenario": "long_history",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 811,
+        "selected_fragment_ids": [
+          "long-18:correction",
+          "long-18:evidence",
+          "long-18:goal",
+          "long-18:history:13",
+          "long-18:history:14",
+          "long-18:history:15",
+          "long-18:history:16",
+          "long-18:history:17",
+          "long-18:system"
+        ]
+      },
+      {
+        "case_id": "long-19",
+        "scenario": "long_history",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 811,
+        "selected_fragment_ids": [
+          "long-19:correction",
+          "long-19:evidence",
+          "long-19:goal",
+          "long-19:history:13",
+          "long-19:history:14",
+          "long-19:history:15",
+          "long-19:history:16",
+          "long-19:history:17",
+          "long-19:system"
+        ]
+      },
+      {
+        "case_id": "correction-00",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 173,
+        "selected_fragment_ids": [
+          "correction-00:current-evidence",
+          "correction-00:goal",
+          "correction-00:latest",
+          "correction-00:system"
+        ]
+      },
+      {
+        "case_id": "correction-01",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 173,
+        "selected_fragment_ids": [
+          "correction-01:current-evidence",
+          "correction-01:goal",
+          "correction-01:latest",
+          "correction-01:system"
+        ]
+      },
+      {
+        "case_id": "correction-02",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 173,
+        "selected_fragment_ids": [
+          "correction-02:current-evidence",
+          "correction-02:goal",
+          "correction-02:latest",
+          "correction-02:system"
+        ]
+      },
+      {
+        "case_id": "correction-03",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 173,
+        "selected_fragment_ids": [
+          "correction-03:current-evidence",
+          "correction-03:goal",
+          "correction-03:latest",
+          "correction-03:system"
+        ]
+      },
+      {
+        "case_id": "correction-04",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 173,
+        "selected_fragment_ids": [
+          "correction-04:current-evidence",
+          "correction-04:goal",
+          "correction-04:latest",
+          "correction-04:system"
+        ]
+      },
+      {
+        "case_id": "correction-05",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 173,
+        "selected_fragment_ids": [
+          "correction-05:current-evidence",
+          "correction-05:goal",
+          "correction-05:latest",
+          "correction-05:system"
+        ]
+      },
+      {
+        "case_id": "correction-06",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 173,
+        "selected_fragment_ids": [
+          "correction-06:current-evidence",
+          "correction-06:goal",
+          "correction-06:latest",
+          "correction-06:system"
+        ]
+      },
+      {
+        "case_id": "correction-07",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 173,
+        "selected_fragment_ids": [
+          "correction-07:current-evidence",
+          "correction-07:goal",
+          "correction-07:latest",
+          "correction-07:system"
+        ]
+      },
+      {
+        "case_id": "correction-08",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 173,
+        "selected_fragment_ids": [
+          "correction-08:current-evidence",
+          "correction-08:goal",
+          "correction-08:latest",
+          "correction-08:system"
+        ]
+      },
+      {
+        "case_id": "correction-09",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 173,
+        "selected_fragment_ids": [
+          "correction-09:current-evidence",
+          "correction-09:goal",
+          "correction-09:latest",
+          "correction-09:system"
+        ]
+      },
+      {
+        "case_id": "correction-10",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 173,
+        "selected_fragment_ids": [
+          "correction-10:current-evidence",
+          "correction-10:goal",
+          "correction-10:latest",
+          "correction-10:system"
+        ]
+      },
+      {
+        "case_id": "correction-11",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 173,
+        "selected_fragment_ids": [
+          "correction-11:current-evidence",
+          "correction-11:goal",
+          "correction-11:latest",
+          "correction-11:system"
+        ]
+      },
+      {
+        "case_id": "correction-12",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 173,
+        "selected_fragment_ids": [
+          "correction-12:current-evidence",
+          "correction-12:goal",
+          "correction-12:latest",
+          "correction-12:system"
+        ]
+      },
+      {
+        "case_id": "correction-13",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 173,
+        "selected_fragment_ids": [
+          "correction-13:current-evidence",
+          "correction-13:goal",
+          "correction-13:latest",
+          "correction-13:system"
+        ]
+      },
+      {
+        "case_id": "correction-14",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 173,
+        "selected_fragment_ids": [
+          "correction-14:current-evidence",
+          "correction-14:goal",
+          "correction-14:latest",
+          "correction-14:system"
+        ]
+      },
+      {
+        "case_id": "correction-15",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 173,
+        "selected_fragment_ids": [
+          "correction-15:current-evidence",
+          "correction-15:goal",
+          "correction-15:latest",
+          "correction-15:system"
+        ]
+      },
+      {
+        "case_id": "correction-16",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 173,
+        "selected_fragment_ids": [
+          "correction-16:current-evidence",
+          "correction-16:goal",
+          "correction-16:latest",
+          "correction-16:system"
+        ]
+      },
+      {
+        "case_id": "correction-17",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 173,
+        "selected_fragment_ids": [
+          "correction-17:current-evidence",
+          "correction-17:goal",
+          "correction-17:latest",
+          "correction-17:system"
+        ]
+      },
+      {
+        "case_id": "correction-18",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 173,
+        "selected_fragment_ids": [
+          "correction-18:current-evidence",
+          "correction-18:goal",
+          "correction-18:latest",
+          "correction-18:system"
+        ]
+      },
+      {
+        "case_id": "correction-19",
+        "scenario": "latest_correction",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 0,
+        "correct_tools": 0,
+        "input_tokens": 173,
+        "selected_fragment_ids": [
+          "correction-19:current-evidence",
+          "correction-19:goal",
+          "correction-19:latest",
+          "correction-19:system"
+        ]
+      },
+      {
+        "case_id": "tools-00",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 1,
+        "correct_tools": 1,
+        "input_tokens": 126,
+        "selected_fragment_ids": [
+          "tools-00:goal",
+          "tools-00:system",
+          "tools-00:tool:order_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-01",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 1,
+        "correct_tools": 1,
+        "input_tokens": 129,
+        "selected_fragment_ids": [
+          "tools-01:goal",
+          "tools-01:system",
+          "tools-01:tool:logistics_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-02",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 1,
+        "correct_tools": 1,
+        "input_tokens": 126,
+        "selected_fragment_ids": [
+          "tools-02:goal",
+          "tools-02:system",
+          "tools-02:tool:policy_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-03",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 1,
+        "correct_tools": 1,
+        "input_tokens": 126,
+        "selected_fragment_ids": [
+          "tools-03:goal",
+          "tools-03:system",
+          "tools-03:tool:order_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-04",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 1,
+        "correct_tools": 1,
+        "input_tokens": 129,
+        "selected_fragment_ids": [
+          "tools-04:goal",
+          "tools-04:system",
+          "tools-04:tool:logistics_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-05",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 1,
+        "correct_tools": 1,
+        "input_tokens": 126,
+        "selected_fragment_ids": [
+          "tools-05:goal",
+          "tools-05:system",
+          "tools-05:tool:policy_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-06",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 1,
+        "correct_tools": 1,
+        "input_tokens": 126,
+        "selected_fragment_ids": [
+          "tools-06:goal",
+          "tools-06:system",
+          "tools-06:tool:order_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-07",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 1,
+        "correct_tools": 1,
+        "input_tokens": 129,
+        "selected_fragment_ids": [
+          "tools-07:goal",
+          "tools-07:system",
+          "tools-07:tool:logistics_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-08",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 1,
+        "correct_tools": 1,
+        "input_tokens": 126,
+        "selected_fragment_ids": [
+          "tools-08:goal",
+          "tools-08:system",
+          "tools-08:tool:policy_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-09",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 1,
+        "correct_tools": 1,
+        "input_tokens": 126,
+        "selected_fragment_ids": [
+          "tools-09:goal",
+          "tools-09:system",
+          "tools-09:tool:order_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-10",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 1,
+        "correct_tools": 1,
+        "input_tokens": 129,
+        "selected_fragment_ids": [
+          "tools-10:goal",
+          "tools-10:system",
+          "tools-10:tool:logistics_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-11",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 1,
+        "correct_tools": 1,
+        "input_tokens": 126,
+        "selected_fragment_ids": [
+          "tools-11:goal",
+          "tools-11:system",
+          "tools-11:tool:policy_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-12",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 1,
+        "correct_tools": 1,
+        "input_tokens": 126,
+        "selected_fragment_ids": [
+          "tools-12:goal",
+          "tools-12:system",
+          "tools-12:tool:order_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-13",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 1,
+        "correct_tools": 1,
+        "input_tokens": 129,
+        "selected_fragment_ids": [
+          "tools-13:goal",
+          "tools-13:system",
+          "tools-13:tool:logistics_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-14",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 1,
+        "correct_tools": 1,
+        "input_tokens": 126,
+        "selected_fragment_ids": [
+          "tools-14:goal",
+          "tools-14:system",
+          "tools-14:tool:policy_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-15",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 1,
+        "correct_tools": 1,
+        "input_tokens": 126,
+        "selected_fragment_ids": [
+          "tools-15:goal",
+          "tools-15:system",
+          "tools-15:tool:order_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-16",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 1,
+        "correct_tools": 1,
+        "input_tokens": 129,
+        "selected_fragment_ids": [
+          "tools-16:goal",
+          "tools-16:system",
+          "tools-16:tool:logistics_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-17",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 1,
+        "correct_tools": 1,
+        "input_tokens": 126,
+        "selected_fragment_ids": [
+          "tools-17:goal",
+          "tools-17:system",
+          "tools-17:tool:policy_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-18",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 1,
+        "correct_tools": 1,
+        "input_tokens": 126,
+        "selected_fragment_ids": [
+          "tools-18:goal",
+          "tools-18:system",
+          "tools-18:tool:order_lookup"
+        ]
+      },
+      {
+        "case_id": "tools-19",
+        "scenario": "dynamic_tools",
+        "critical_retained": true,
+        "stale_selected": 0,
+        "selected_tools": 1,
+        "correct_tools": 1,
+        "input_tokens": 129,
+        "selected_fragment_ids": [
+          "tools-19:goal",
+          "tools-19:system",
+          "tools-19:tool:logistics_lookup"
+        ]
+      }
+    ]
+  }
+}

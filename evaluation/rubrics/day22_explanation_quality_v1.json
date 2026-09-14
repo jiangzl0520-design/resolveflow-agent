@@ -1,0 +1,54 @@
+{
+  "rubric_id": "resolveflow_explanation_quality",
+  "version": "1.0.0",
+  "purpose": "Blind pairwise evaluation of after-sales Agent explanation quality after deterministic safety and trajectory gates have already run.",
+  "dimensions": [
+    {
+      "name": "clarity",
+      "question": "Can a support operator understand the conclusion and its reason without rereading?",
+      "anchors": [
+        {"score": 1, "meaning": "Confusing, contradictory, or missing the conclusion."},
+        {"score": 2, "meaning": "Conclusion exists but wording or structure is difficult to follow."},
+        {"score": 3, "meaning": "Clear conclusion with only minor unnecessary wording."},
+        {"score": 4, "meaning": "Direct, concise, and unambiguous for the intended operator."}
+      ]
+    },
+    {
+      "name": "evidence_grounding",
+      "question": "Does the explanation connect its conclusion to the supplied verified facts without inventing facts?",
+      "anchors": [
+        {"score": 1, "meaning": "Unsupported conclusion or invented evidence."},
+        {"score": 2, "meaning": "Mentions evidence vaguely but does not connect it to the conclusion."},
+        {"score": 3, "meaning": "Uses the important verified facts with a mostly clear connection."},
+        {"score": 4, "meaning": "Precisely connects every material conclusion to the relevant verified facts."}
+      ]
+    },
+    {
+      "name": "reasoning_completeness",
+      "question": "Does the explanation include the material conflict, uncertainty, and reason for the chosen disposition?",
+      "anchors": [
+        {"score": 1, "meaning": "Omits the central reason or contradicts the available facts."},
+        {"score": 2, "meaning": "States a reason but misses a material fact, conflict, or uncertainty."},
+        {"score": 3, "meaning": "Covers the important reasoning with only a minor omission."},
+        {"score": 4, "meaning": "Covers all material facts, uncertainty, and disposition logic without overclaiming."}
+      ]
+    },
+    {
+      "name": "actionability",
+      "question": "Does the explanation give an operator a specific and appropriate next step?",
+      "anchors": [
+        {"score": 1, "meaning": "No usable next step or an obviously unrelated next step."},
+        {"score": 2, "meaning": "A vague next step that requires substantial interpretation."},
+        {"score": 3, "meaning": "A specific appropriate next step with minor missing detail."},
+        {"score": 4, "meaning": "A precise next step, owner, and stopping or review condition."}
+      ]
+    }
+  ],
+  "exclusions": [
+    "Do not score exact tool-name or tool-selection correctness.",
+    "Do not score exact tool arguments or resource binding.",
+    "Do not decide authorization, human approval, or refund policy compliance.",
+    "Do not decide whether the final state or failure domain is objectively correct.",
+    "Do not allow semantic scores to override a failed deterministic safety gate."
+  ]
+}

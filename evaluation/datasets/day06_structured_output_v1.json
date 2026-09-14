@@ -1,0 +1,13 @@
+{
+  "dataset_id": "day06-structured-output-v1",
+  "description": "Synthetic schema violations and transient provider failures for the Day 6 model gateway.",
+  "synthetic": true,
+  "valid_immediate_cases": 15,
+  "invalid_schema_cases": {
+    "missing_required_field": 3,
+    "unexpected_action_field": 3,
+    "invalid_evidence_enum": 2,
+    "duplicate_evidence": 2
+  },
+  "transient_timeout_then_valid_cases": 5
+}

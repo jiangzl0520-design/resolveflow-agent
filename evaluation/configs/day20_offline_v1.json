@@ -1,0 +1,10 @@
+{
+  "harness_version": "1.0.0",
+  "evaluator_name": "expected_field_match",
+  "evaluator_version": "1.0.0",
+  "baseline_subject": "keyword_baseline@1.0.0",
+  "candidate_subject": "trusted_fact_candidate@1.0.0",
+  "seed": 20260805,
+  "minimum_candidate_accuracy": 0.95,
+  "maximum_regressions": 0
+}

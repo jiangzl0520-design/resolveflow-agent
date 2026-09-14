@@ -1,0 +1,1314 @@
+{
+  "dataset": {
+    "id": "day16-long-term-memory-v1",
+    "synthetic": true,
+    "case_count": 80,
+    "path": "C:\\Users\\16696\\Documents\\agent初始阶段学习\\resolveflow_agent\\evaluation\\datasets\\day16_long_term_memory_v1.json"
+  },
+  "runtime": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "paid_model_calls": 0,
+    "embedding_calls": 0
+  },
+  "save_everything_baseline": {
+    "correct_handling_percent": 31.25,
+    "unsafe_writes": 40,
+    "unsafe_recalls": 15,
+    "average_memory_payload_characters": 2631.38
+  },
+  "policy_controlled_memory": {
+    "correct_handling_percent": 100.0,
+    "unsafe_writes": 0,
+    "unsafe_recalls": 0,
+    "average_memory_payload_characters": 3.56
+  },
+  "measured_value": {
+    "correct_handling_lift_points": 68.75,
+    "unsafe_writes_blocked": 40,
+    "unsafe_recalls_blocked": 15,
+    "memory_payload_reduction_percent": 99.86
+  },
+  "raw_results": [
+    {
+      "case_id": "stable-00",
+      "scenario": "stable_preference",
+      "baseline": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2334
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 5
+      }
+    },
+    {
+      "case_id": "stable-01",
+      "scenario": "stable_preference",
+      "baseline": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2334
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 5
+      }
+    },
+    {
+      "case_id": "stable-02",
+      "scenario": "stable_preference",
+      "baseline": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2334
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 5
+      }
+    },
+    {
+      "case_id": "stable-03",
+      "scenario": "stable_preference",
+      "baseline": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2334
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 5
+      }
+    },
+    {
+      "case_id": "stable-04",
+      "scenario": "stable_preference",
+      "baseline": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2334
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 5
+      }
+    },
+    {
+      "case_id": "stable-05",
+      "scenario": "stable_preference",
+      "baseline": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2334
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 5
+      }
+    },
+    {
+      "case_id": "stable-06",
+      "scenario": "stable_preference",
+      "baseline": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2334
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 5
+      }
+    },
+    {
+      "case_id": "stable-07",
+      "scenario": "stable_preference",
+      "baseline": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2334
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 5
+      }
+    },
+    {
+      "case_id": "stable-08",
+      "scenario": "stable_preference",
+      "baseline": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2334
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 5
+      }
+    },
+    {
+      "case_id": "stable-09",
+      "scenario": "stable_preference",
+      "baseline": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2334
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 5
+      }
+    },
+    {
+      "case_id": "stable-10",
+      "scenario": "stable_preference",
+      "baseline": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2334
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 5
+      }
+    },
+    {
+      "case_id": "stable-11",
+      "scenario": "stable_preference",
+      "baseline": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2334
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 5
+      }
+    },
+    {
+      "case_id": "stable-12",
+      "scenario": "stable_preference",
+      "baseline": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2334
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 5
+      }
+    },
+    {
+      "case_id": "stable-13",
+      "scenario": "stable_preference",
+      "baseline": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2334
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 5
+      }
+    },
+    {
+      "case_id": "stable-14",
+      "scenario": "stable_preference",
+      "baseline": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2334
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 5
+      }
+    },
+    {
+      "case_id": "stable-15",
+      "scenario": "stable_preference",
+      "baseline": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2334
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 5
+      }
+    },
+    {
+      "case_id": "stable-16",
+      "scenario": "stable_preference",
+      "baseline": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2334
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 5
+      }
+    },
+    {
+      "case_id": "stable-17",
+      "scenario": "stable_preference",
+      "baseline": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2334
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 5
+      }
+    },
+    {
+      "case_id": "stable-18",
+      "scenario": "stable_preference",
+      "baseline": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2334
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 5
+      }
+    },
+    {
+      "case_id": "stable-19",
+      "scenario": "stable_preference",
+      "baseline": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2334
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 5
+      }
+    },
+    {
+      "case_id": "inference-00",
+      "scenario": "unconfirmed_model_inference",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "inference-01",
+      "scenario": "unconfirmed_model_inference",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "inference-02",
+      "scenario": "unconfirmed_model_inference",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "inference-03",
+      "scenario": "unconfirmed_model_inference",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "inference-04",
+      "scenario": "unconfirmed_model_inference",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "inference-05",
+      "scenario": "unconfirmed_model_inference",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "inference-06",
+      "scenario": "unconfirmed_model_inference",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "inference-07",
+      "scenario": "unconfirmed_model_inference",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "inference-08",
+      "scenario": "unconfirmed_model_inference",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "inference-09",
+      "scenario": "unconfirmed_model_inference",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "inference-10",
+      "scenario": "unconfirmed_model_inference",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "inference-11",
+      "scenario": "unconfirmed_model_inference",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "inference-12",
+      "scenario": "unconfirmed_model_inference",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "inference-13",
+      "scenario": "unconfirmed_model_inference",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "inference-14",
+      "scenario": "unconfirmed_model_inference",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "inference-15",
+      "scenario": "unconfirmed_model_inference",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "inference-16",
+      "scenario": "unconfirmed_model_inference",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "inference-17",
+      "scenario": "unconfirmed_model_inference",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "inference-18",
+      "scenario": "unconfirmed_model_inference",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "inference-19",
+      "scenario": "unconfirmed_model_inference",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "business-00",
+      "scenario": "prohibited_business_fact",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "business-01",
+      "scenario": "prohibited_business_fact",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "business-02",
+      "scenario": "prohibited_business_fact",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "business-03",
+      "scenario": "prohibited_business_fact",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "business-04",
+      "scenario": "prohibited_business_fact",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "business-05",
+      "scenario": "prohibited_business_fact",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "business-06",
+      "scenario": "prohibited_business_fact",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "business-07",
+      "scenario": "prohibited_business_fact",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "business-08",
+      "scenario": "prohibited_business_fact",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "business-09",
+      "scenario": "prohibited_business_fact",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "business-10",
+      "scenario": "prohibited_business_fact",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "business-11",
+      "scenario": "prohibited_business_fact",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "business-12",
+      "scenario": "prohibited_business_fact",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "business-13",
+      "scenario": "prohibited_business_fact",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "business-14",
+      "scenario": "prohibited_business_fact",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "business-15",
+      "scenario": "prohibited_business_fact",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "business-16",
+      "scenario": "prohibited_business_fact",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "business-17",
+      "scenario": "prohibited_business_fact",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "business-18",
+      "scenario": "prohibited_business_fact",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "business-19",
+      "scenario": "prohibited_business_fact",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 1,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 2337
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "expired-00",
+      "scenario": "lifecycle_expired",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 1,
+        "memory_payload_characters": 2343
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 7
+      }
+    },
+    {
+      "case_id": "expired-01",
+      "scenario": "lifecycle_expired",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 1,
+        "memory_payload_characters": 2343
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 7
+      }
+    },
+    {
+      "case_id": "expired-02",
+      "scenario": "lifecycle_expired",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 1,
+        "memory_payload_characters": 2343
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 7
+      }
+    },
+    {
+      "case_id": "expired-03",
+      "scenario": "lifecycle_expired",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 1,
+        "memory_payload_characters": 2343
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 7
+      }
+    },
+    {
+      "case_id": "expired-04",
+      "scenario": "lifecycle_expired",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 1,
+        "memory_payload_characters": 2343
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 7
+      }
+    },
+    {
+      "case_id": "conflict-00",
+      "scenario": "lifecycle_conflict",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 1,
+        "memory_payload_characters": 4693
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 15
+      }
+    },
+    {
+      "case_id": "conflict-01",
+      "scenario": "lifecycle_conflict",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 1,
+        "memory_payload_characters": 4693
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 15
+      }
+    },
+    {
+      "case_id": "conflict-02",
+      "scenario": "lifecycle_conflict",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 1,
+        "memory_payload_characters": 4693
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 15
+      }
+    },
+    {
+      "case_id": "conflict-03",
+      "scenario": "lifecycle_conflict",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 1,
+        "memory_payload_characters": 4693
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 15
+      }
+    },
+    {
+      "case_id": "conflict-04",
+      "scenario": "lifecycle_conflict",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 1,
+        "memory_payload_characters": 4693
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 15
+      }
+    },
+    {
+      "case_id": "deleted-00",
+      "scenario": "lifecycle_deleted",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 1,
+        "memory_payload_characters": 2343
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "deleted-01",
+      "scenario": "lifecycle_deleted",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 1,
+        "memory_payload_characters": 2343
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "deleted-02",
+      "scenario": "lifecycle_deleted",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 1,
+        "memory_payload_characters": 2343
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "deleted-03",
+      "scenario": "lifecycle_deleted",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 1,
+        "memory_payload_characters": 2343
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "deleted-04",
+      "scenario": "lifecycle_deleted",
+      "baseline": {
+        "correct": false,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 1,
+        "memory_payload_characters": 2343
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 0
+      }
+    },
+    {
+      "case_id": "updated-00",
+      "scenario": "lifecycle_updated",
+      "baseline": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 4691
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 15
+      }
+    },
+    {
+      "case_id": "updated-01",
+      "scenario": "lifecycle_updated",
+      "baseline": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 4691
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 15
+      }
+    },
+    {
+      "case_id": "updated-02",
+      "scenario": "lifecycle_updated",
+      "baseline": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 4691
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 15
+      }
+    },
+    {
+      "case_id": "updated-03",
+      "scenario": "lifecycle_updated",
+      "baseline": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 4691
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 15
+      }
+    },
+    {
+      "case_id": "updated-04",
+      "scenario": "lifecycle_updated",
+      "baseline": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 4691
+      },
+      "memory_service": {
+        "correct": true,
+        "unsafe_writes": 0,
+        "unsafe_recalls": 0,
+        "memory_payload_characters": 15
+      }
+    }
+  ]
+}

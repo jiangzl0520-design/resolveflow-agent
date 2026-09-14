@@ -1,0 +1,17 @@
+{
+  "dataset_id": "day08-agent-loop-v1",
+  "description": "Synthetic after-sales facts for fixed-flow versus observation-driven Agent execution.",
+  "synthetic": true,
+  "scenario_counts": {
+    "cancelled_order": 12,
+    "delivered_with_proof": 8,
+    "delivery_in_transit": 5,
+    "transient_logistics_failure": 5
+  },
+  "expected_outcomes": {
+    "cancelled_order": "no_refundable_payment",
+    "delivered_with_proof": "human_review_required",
+    "delivery_in_transit": "delivery_in_progress",
+    "transient_logistics_failure": "human_review_required"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "dataset_id": "day19_incident_diagnosis_v1",
+  "data_kind": "synthetic_aggregate_windows",
+  "description": "Two reproducible 100-run windows used to test whether metrics explain a success-rate regression.",
+  "baseline_window": {
+    "completed": 95,
+    "failures": {"unknown": 5}
+  },
+  "incident_window": {
+    "completed": 70,
+    "failures": {"tool": 20, "model": 5, "retrieval": 3, "context": 2}
+  },
+  "expected": {
+    "success_rate_change_percentage_points": -25.0,
+    "top_failure_domain": "tool",
+    "top_failure_count": 20,
+    "attributed_failure_share": 0.6666666667
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "dataset_id": "day15-context-builder-v1",
+  "synthetic": true,
+  "description": "Deterministic long-context, latest-correction, and dynamic-tool-selection cases for comparing naive tail truncation with the Day15 context builder.",
+  "cases_per_scenario": 20,
+  "max_input_tokens": 900,
+  "context_window_tokens": 10000,
+  "reserved_output_tokens": 500,
+  "reserved_reasoning_tokens": 500,
+  "safety_margin_tokens": 500,
+  "long_history_fragments": 18,
+  "long_history_words_per_fragment": 90
+}

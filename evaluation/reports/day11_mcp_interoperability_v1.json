@@ -1,0 +1,60 @@
+{
+  "report_id": "day11-mcp-interoperability-v1",
+  "dataset": {
+    "dataset_id": "day11-mcp-interoperability-v1",
+    "synthetic": true,
+    "description": "Deterministic MCP interoperability, authorization, contract drift, and circuit-breaker cases.",
+    "scenario_counts": {
+      "local_remote_parity": 30,
+      "unauthorized_or_cross_tenant": 10,
+      "contract_drift": 10,
+      "dependency_outage": 10
+    },
+    "circuit_failure_threshold": 3,
+    "circuit_recovery_seconds": 5,
+    "case_count": 60
+  },
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "mcp_sdk": "2.0.0",
+    "transport": "Streamable HTTP for parity/auth cases",
+    "paid_api_calls": 0
+  },
+  "interoperability": {
+    "local_remote_parity_matches": 30,
+    "parity_cases": 30,
+    "parity_percent": 100.0
+  },
+  "authorization_and_tenant_isolation": {
+    "cases": 10,
+    "cross_tenant_cases": 5,
+    "invalid_token_cases": 5,
+    "unauthorized_successes": 0
+  },
+  "contract_drift": {
+    "cases": 10,
+    "detected_before_agent_exposure": 10,
+    "detection_percent": 100.0
+  },
+  "dependency_outage": {
+    "requests": 10,
+    "failure_threshold": 3,
+    "remote_calls_during_outage": 3,
+    "circuit_open_results": 7,
+    "downstream_calls_avoided": 7,
+    "recovery_probe_succeeded": true
+  },
+  "measured_value": {
+    "tool_outcome_parity_percent": 100.0,
+    "unauthorized_successful_calls": 0,
+    "contract_drifts_blocked": 10,
+    "outage_downstream_calls_avoided": 7
+  },
+  "interpretation_limits": [
+    "Orders and outage cases are synthetic and deterministic.",
+    "Parity/auth cases use a real local Uvicorn process and MCP Streamable HTTP; contract drift and circuit cases use deterministic gateways.",
+    "MCP demonstrates tool interoperability and process isolation, not business authorization by itself.",
+    "No production traffic, latency SLO, revenue, or model-quality improvement is claimed."
+  ]
+}

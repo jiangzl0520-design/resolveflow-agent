@@ -1,0 +1,10 @@
+{
+  "dataset_id": "day16-long-term-memory-v1",
+  "synthetic": true,
+  "description": "Deterministic cross-session memory cases comparing save-every-conversation behavior with policy-controlled semantic memory.",
+  "stable_preference_cases": 20,
+  "model_inference_cases": 20,
+  "prohibited_business_fact_cases": 20,
+  "lifecycle_cases_per_type": 5,
+  "history_noise_words": 120
+}

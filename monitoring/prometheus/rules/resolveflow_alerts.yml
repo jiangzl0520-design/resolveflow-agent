@@ -1,0 +1,53 @@
+groups:
+  - name: resolveflow-slo
+    rules:
+      - alert: ResolveFlowApiTargetDown
+        expr: up{job="resolveflow-api"} == 0
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: ResolveFlow API metrics target is unavailable
+
+      - alert: ResolveFlowAgentSuccessRateLow
+        expr: |
+          sum(increase(resolveflow_agent_runs_total{status="completed"}[10m]))
+          / sum(increase(resolveflow_agent_runs_total[10m])) < 0.90
+          and sum(increase(resolveflow_agent_runs_total[10m])) >= 10
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: Agent completion SLO is below 90 percent
+
+      - alert: ResolveFlowToolFailureRateHigh
+        expr: |
+          sum(increase(resolveflow_tool_calls_total{status="failed"}[10m]))
+          / sum(increase(resolveflow_tool_calls_total[10m])) > 0.10
+          and sum(increase(resolveflow_tool_calls_total[10m])) >= 10
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: Tool failure rate exceeds 10 percent
+
+      - alert: ResolveFlowModelFailureRateHigh
+        expr: |
+          sum(increase(resolveflow_llm_calls_total{status="failed"}[10m]))
+          / sum(increase(resolveflow_llm_calls_total[10m])) > 0.05
+          and sum(increase(resolveflow_llm_calls_total[10m])) >= 10
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: Model gateway failure rate exceeds 5 percent
+
+      - alert: ResolveFlowApiP95LatencyHigh
+        expr: |
+          histogram_quantile(0.95,
+            sum by (le) (rate(resolveflow_http_request_duration_seconds_bucket[10m]))) > 1
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: API p95 latency exceeds one second

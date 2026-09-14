@@ -1,0 +1,62 @@
+{
+  "report_id": "day12-knowledge-ingestion-v1",
+  "dataset": {
+    "dataset_id": "day12-knowledge-ingestion-v1",
+    "synthetic": true,
+    "description": "Deterministic policy ingestion cases for lineage, deduplication, version safety, incremental updates, and retry recovery.",
+    "scenario_counts": {
+      "traceable_ingestion": 20,
+      "duplicate_ingestion": 15,
+      "same_version_drift": 10,
+      "incremental_update": 10,
+      "failed_publish_rerun": 5
+    },
+    "case_count": 60
+  },
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "repository": "deterministic in-memory evaluation adapter",
+    "paid_api_calls": 0
+  },
+  "traceability": {
+    "documents": 20,
+    "total_chunks": 40,
+    "complete_chunks": 40,
+    "complete_percent": 100.0
+  },
+  "deduplication": {
+    "cases": 15,
+    "duplicates_blocked": 15,
+    "documents_created": 15,
+    "blocked_percent": 100.0
+  },
+  "same_version_drift": {
+    "cases": 10,
+    "drifts_blocked": 10,
+    "documents_created": 10,
+    "blocked_percent": 100.0
+  },
+  "incremental_update": {
+    "cases": 10,
+    "current_pointer_updates": 10,
+    "old_versions_retained": 10
+  },
+  "failed_publish_rerun": {
+    "cases": 5,
+    "recovered_on_same_run": 5,
+    "failures_without_partial_documents": 5
+  },
+  "measured_value": {
+    "traceable_chunk_percent": 100.0,
+    "duplicate_documents_avoided": 15,
+    "silent_same_version_overwrites_prevented": 10,
+    "failed_runs_recovered_without_partial_documents": 5
+  },
+  "interpretation_limits": [
+    "All evaluation documents and failures are synthetic and deterministic.",
+    "The report measures ingestion integrity, not retrieval relevance or answer quality.",
+    "Real PostgreSQL behavior is covered separately by the postgres integration suite.",
+    "No production traffic, business revenue, or model-quality improvement is claimed."
+  ]
+}

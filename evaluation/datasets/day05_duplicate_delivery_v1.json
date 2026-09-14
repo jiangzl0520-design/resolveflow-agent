@@ -1,0 +1,8 @@
+{
+  "dataset_id": "day05-duplicate-delivery-v1",
+  "description": "Synthetic duplicate-delivery and expired-lease workload for the Day 5 durable job subsystem.",
+  "synthetic": true,
+  "unique_jobs": 25,
+  "deliveries_per_job": 3,
+  "expired_lease_jobs": 5
+}

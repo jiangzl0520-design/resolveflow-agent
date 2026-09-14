@@ -1,0 +1,12 @@
+{
+  "dataset_id": "day12-knowledge-ingestion-v1",
+  "synthetic": true,
+  "description": "Deterministic policy ingestion cases for lineage, deduplication, version safety, incremental updates, and retry recovery.",
+  "scenario_counts": {
+    "traceable_ingestion": 20,
+    "duplicate_ingestion": 15,
+    "same_version_drift": 10,
+    "incremental_update": 10,
+    "failed_publish_rerun": 5
+  }
+}

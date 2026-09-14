@@ -1,0 +1,17 @@
+{
+  "dataset_id": "day14-grounded-answer-v1",
+  "synthetic": true,
+  "description": "Deterministic synthetic cases for grounding gates, not production answer-quality claims.",
+  "scenario_counts": {
+    "answerable": 20,
+    "insufficient": 10,
+    "conflict": 10,
+    "expired": 10,
+    "forged_citation": 10
+  },
+  "question": "显示签收但客户否认收货时，下一步应该做什么？",
+  "valid_policy": "显示签收但客户否认收货时，必须先查询签收证明。",
+  "conflicting_policy": "显示签收但客户否认收货时，可以直接退款。",
+  "valid_quote": "必须先查询签收证明",
+  "expected_claim": "应先查询签收证明。"
+}

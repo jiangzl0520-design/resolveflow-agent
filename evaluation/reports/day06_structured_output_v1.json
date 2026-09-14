@@ -1,0 +1,43 @@
+{
+  "report_id": "day06-structured-output-v1",
+  "dataset": {
+    "dataset_id": "day06-structured-output-v1",
+    "description": "Synthetic schema violations and transient provider failures for the Day 6 model gateway.",
+    "synthetic": true,
+    "valid_immediate_cases": 15,
+    "invalid_schema_cases": {
+      "missing_required_field": 3,
+      "unexpected_action_field": 3,
+      "invalid_evidence_enum": 2,
+      "duplicate_evidence": 2
+    },
+    "transient_timeout_then_valid_cases": 5
+  },
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "provider": "FakeLLMProvider",
+    "paid_api_calls": 0
+  },
+  "baseline_json_only_no_gateway": {
+    "total_cases": 30,
+    "safe_typed_decisions": 15,
+    "invalid_outputs_entering_business_logic": 10,
+    "transient_failures_recovered": 0,
+    "provider_attempts": 30
+  },
+  "resolveflow_model_gateway": {
+    "total_cases": 30,
+    "safe_typed_decisions": 30,
+    "model_decisions": 20,
+    "conservative_fallback_decisions": 10,
+    "invalid_outputs_entering_business_logic": 0,
+    "transient_failures_recovered": 5,
+    "provider_attempts": 35
+  },
+  "interpretation_limits": [
+    "All examples and model outputs are synthetic.",
+    "This measures schema enforcement and recovery behavior, not real-model semantic quality.",
+    "Fake LLM uses zero paid tokens; production quality, latency, and cost remain unverified."
+  ]
+}

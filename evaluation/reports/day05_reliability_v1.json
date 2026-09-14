@@ -1,0 +1,38 @@
+{
+  "report_id": "day05-reliability-v1",
+  "generated_at": "2026-07-24T12:38:44.516348+00:00",
+  "dataset": {
+    "dataset_id": "day05-duplicate-delivery-v1",
+    "description": "Synthetic duplicate-delivery and expired-lease workload for the Day 5 durable job subsystem.",
+    "synthetic": true,
+    "unique_jobs": 25,
+    "deliveries_per_job": 3,
+    "expired_lease_jobs": 5
+  },
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "database": "temporary SQLite; PostgreSQL concurrency is tested separately"
+  },
+  "baseline_without_idempotent_claim": {
+    "deliveries": 75,
+    "side_effects": 75,
+    "duplicate_side_effects": 50,
+    "duplicate_side_effect_rate": 0.6667
+  },
+  "resolveflow_durable_job_engine": {
+    "deliveries": 75,
+    "successful_jobs": 25,
+    "side_effects": 25,
+    "duplicate_side_effects": 0,
+    "jobs_with_exactly_one_side_effect": 25,
+    "expired_lease_jobs_recovered": 5,
+    "p50_delivery_latency_ms": 0.932,
+    "p95_delivery_latency_ms": 11.814
+  },
+  "interpretation_limits": [
+    "This is a synthetic reliability experiment, not production business revenue.",
+    "Latency is local-machine evidence and must not be generalized to production.",
+    "The baseline intentionally represents an at-least-once consumer without an idempotent database claim."
+  ]
+}

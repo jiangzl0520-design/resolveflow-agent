@@ -1,0 +1,49 @@
+{
+  "report_id": "day08-agent-loop-v1",
+  "dataset": {
+    "dataset_id": "day08-agent-loop-v1",
+    "description": "Synthetic after-sales facts for fixed-flow versus observation-driven Agent execution.",
+    "synthetic": true,
+    "scenario_counts": {
+      "cancelled_order": 12,
+      "delivered_with_proof": 8,
+      "delivery_in_transit": 5,
+      "transient_logistics_failure": 5
+    },
+    "expected_outcomes": {
+      "cancelled_order": "no_refundable_payment",
+      "delivered_with_proof": "human_review_required",
+      "delivery_in_transit": "delivery_in_progress",
+      "transient_logistics_failure": "human_review_required"
+    },
+    "case_count": 30
+  },
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "planner": "deterministic_observation_driven",
+    "tool_provider": "InMemoryAfterSalesDataSource",
+    "paid_api_calls": 0
+  },
+  "fixed_three_tool_pipeline_baseline": {
+    "completed_runs": 13,
+    "correct_outcomes": 13,
+    "tool_calls": 73,
+    "unnecessary_calls_after_terminal_order_fact": 12,
+    "transient_failures_recovered": 0
+  },
+  "resolveflow_minimal_agent_loop": {
+    "completed_runs": 30,
+    "correct_outcomes": 30,
+    "tool_calls": 71,
+    "agent_steps": 101,
+    "unnecessary_calls_after_terminal_order_fact": 0,
+    "transient_failures_recovered": 5
+  },
+  "interpretation_limits": [
+    "All business facts, failures, and planner decisions are synthetic.",
+    "The planner is deterministic; this does not measure real-LLM semantic quality.",
+    "This measures branching, recovery, verification, and bounded execution rather than production business value.",
+    "No production latency, token cost, or human-intervention rate is claimed."
+  ]
+}

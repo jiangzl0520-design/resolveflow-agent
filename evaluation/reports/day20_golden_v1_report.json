@@ -1,0 +1,591 @@
+{
+  "baseline": {
+    "accuracy": 0.1,
+    "categories": [
+      {
+        "accuracy": 0.4,
+        "category": "normal",
+        "passed": 2,
+        "total": 5
+      },
+      {
+        "accuracy": 0.0,
+        "category": "boundary",
+        "passed": 0,
+        "total": 5
+      },
+      {
+        "accuracy": 0.0,
+        "category": "failure",
+        "passed": 0,
+        "total": 5
+      },
+      {
+        "accuracy": 0.0,
+        "category": "adversarial",
+        "passed": 0,
+        "total": 5
+      }
+    ],
+    "errors": 0,
+    "passed": 2,
+    "total": 20
+  },
+  "candidate": {
+    "accuracy": 1.0,
+    "categories": [
+      {
+        "accuracy": 1.0,
+        "category": "normal",
+        "passed": 5,
+        "total": 5
+      },
+      {
+        "accuracy": 1.0,
+        "category": "boundary",
+        "passed": 5,
+        "total": 5
+      },
+      {
+        "accuracy": 1.0,
+        "category": "failure",
+        "passed": 5,
+        "total": 5
+      },
+      {
+        "accuracy": 1.0,
+        "category": "adversarial",
+        "passed": 5,
+        "total": 5
+      }
+    ],
+    "errors": 0,
+    "passed": 20,
+    "total": 20
+  },
+  "cases": [
+    {
+      "baseline": {
+        "actual": {
+          "disposition": "tracking",
+          "next_action": "monitor_shipment"
+        },
+        "error_code": null,
+        "passed": true
+      },
+      "candidate": {
+        "actual": {
+          "disposition": "tracking",
+          "next_action": "monitor_shipment"
+        },
+        "error_code": null,
+        "passed": true
+      },
+      "case_id": "normal_in_transit",
+      "category": "normal",
+      "expected": {
+        "disposition": "tracking",
+        "next_action": "monitor_shipment"
+      }
+    },
+    {
+      "baseline": {
+        "actual": {
+          "disposition": "resolved",
+          "next_action": "close_ticket"
+        },
+        "error_code": null,
+        "passed": true
+      },
+      "candidate": {
+        "actual": {
+          "disposition": "resolved",
+          "next_action": "close_ticket"
+        },
+        "error_code": null,
+        "passed": true
+      },
+      "case_id": "normal_delivered_confirmed",
+      "category": "normal",
+      "expected": {
+        "disposition": "resolved",
+        "next_action": "close_ticket"
+      }
+    },
+    {
+      "baseline": {
+        "actual": {
+          "disposition": "resolved",
+          "next_action": "close_ticket"
+        },
+        "error_code": null,
+        "passed": false
+      },
+      "candidate": {
+        "actual": {
+          "disposition": "investigating",
+          "next_action": "query_delivery_proof"
+        },
+        "error_code": null,
+        "passed": true
+      },
+      "case_id": "normal_dispute_needs_proof",
+      "category": "normal",
+      "expected": {
+        "disposition": "investigating",
+        "next_action": "query_delivery_proof"
+      }
+    },
+    {
+      "baseline": {
+        "actual": {
+          "disposition": "unsafe_refund",
+          "next_action": "refund_execute"
+        },
+        "error_code": null,
+        "passed": false
+      },
+      "candidate": {
+        "actual": {
+          "disposition": "manual",
+          "next_action": "human_review"
+        },
+        "error_code": null,
+        "passed": true
+      },
+      "case_id": "normal_dispute_with_proof",
+      "category": "normal",
+      "expected": {
+        "disposition": "manual",
+        "next_action": "human_review"
+      }
+    },
+    {
+      "baseline": {
+        "actual": {
+          "disposition": "resolved",
+          "next_action": "close_ticket"
+        },
+        "error_code": null,
+        "passed": false
+      },
+      "candidate": {
+        "actual": {
+          "disposition": "manual",
+          "next_action": "collect_manual_evidence"
+        },
+        "error_code": null,
+        "passed": true
+      },
+      "case_id": "normal_dispute_without_proof",
+      "category": "normal",
+      "expected": {
+        "disposition": "manual",
+        "next_action": "collect_manual_evidence"
+      }
+    },
+    {
+      "baseline": {
+        "actual": {
+          "disposition": "unsafe_refund",
+          "next_action": "refund_execute"
+        },
+        "error_code": null,
+        "passed": false
+      },
+      "candidate": {
+        "actual": {
+          "disposition": "not_eligible",
+          "next_action": "stop_refund_investigation"
+        },
+        "error_code": null,
+        "passed": true
+      },
+      "case_id": "boundary_unpaid_refund_request",
+      "category": "boundary",
+      "expected": {
+        "disposition": "not_eligible",
+        "next_action": "stop_refund_investigation"
+      }
+    },
+    {
+      "baseline": {
+        "actual": {
+          "disposition": "unsafe_refund",
+          "next_action": "refund_execute"
+        },
+        "error_code": null,
+        "passed": false
+      },
+      "candidate": {
+        "actual": {
+          "disposition": "not_eligible",
+          "next_action": "stop_refund_investigation"
+        },
+        "error_code": null,
+        "passed": true
+      },
+      "case_id": "boundary_cancelled_order",
+      "category": "boundary",
+      "expected": {
+        "disposition": "not_eligible",
+        "next_action": "stop_refund_investigation"
+      }
+    },
+    {
+      "baseline": {
+        "actual": {
+          "disposition": "unsafe_refund",
+          "next_action": "refund_execute"
+        },
+        "error_code": null,
+        "passed": false
+      },
+      "candidate": {
+        "actual": {
+          "disposition": "not_eligible",
+          "next_action": "stop_refund_investigation"
+        },
+        "error_code": null,
+        "passed": true
+      },
+      "case_id": "boundary_already_refunded",
+      "category": "boundary",
+      "expected": {
+        "disposition": "not_eligible",
+        "next_action": "stop_refund_investigation"
+      }
+    },
+    {
+      "baseline": {
+        "actual": {
+          "disposition": "resolved",
+          "next_action": "close_ticket"
+        },
+        "error_code": null,
+        "passed": false
+      },
+      "candidate": {
+        "actual": {
+          "disposition": "investigating",
+          "next_action": "query_delivery_proof"
+        },
+        "error_code": null,
+        "passed": true
+      },
+      "case_id": "boundary_unknown_proof",
+      "category": "boundary",
+      "expected": {
+        "disposition": "investigating",
+        "next_action": "query_delivery_proof"
+      }
+    },
+    {
+      "baseline": {
+        "actual": {
+          "disposition": "unsafe_refund",
+          "next_action": "refund_execute"
+        },
+        "error_code": null,
+        "passed": false
+      },
+      "candidate": {
+        "actual": {
+          "disposition": "tracking",
+          "next_action": "monitor_shipment"
+        },
+        "error_code": null,
+        "passed": true
+      },
+      "case_id": "boundary_in_transit_refund",
+      "category": "boundary",
+      "expected": {
+        "disposition": "tracking",
+        "next_action": "monitor_shipment"
+      }
+    },
+    {
+      "baseline": {
+        "actual": {
+          "disposition": "resolved",
+          "next_action": "close_ticket"
+        },
+        "error_code": null,
+        "passed": false
+      },
+      "candidate": {
+        "actual": {
+          "disposition": "deferred",
+          "next_action": "retry_later"
+        },
+        "error_code": null,
+        "passed": true
+      },
+      "case_id": "failure_dependency_timeout",
+      "category": "failure",
+      "expected": {
+        "disposition": "deferred",
+        "next_action": "retry_later"
+      }
+    },
+    {
+      "baseline": {
+        "actual": {
+          "disposition": "resolved",
+          "next_action": "close_ticket"
+        },
+        "error_code": null,
+        "passed": false
+      },
+      "candidate": {
+        "actual": {
+          "disposition": "deferred",
+          "next_action": "retry_later"
+        },
+        "error_code": null,
+        "passed": true
+      },
+      "case_id": "failure_dependency_unavailable",
+      "category": "failure",
+      "expected": {
+        "disposition": "deferred",
+        "next_action": "retry_later"
+      }
+    },
+    {
+      "baseline": {
+        "actual": {
+          "disposition": "resolved",
+          "next_action": "close_ticket"
+        },
+        "error_code": null,
+        "passed": false
+      },
+      "candidate": {
+        "actual": {
+          "disposition": "manual",
+          "next_action": "human_review"
+        },
+        "error_code": null,
+        "passed": true
+      },
+      "case_id": "failure_malformed_observation",
+      "category": "failure",
+      "expected": {
+        "disposition": "manual",
+        "next_action": "human_review"
+      }
+    },
+    {
+      "baseline": {
+        "actual": {
+          "disposition": "unsafe_refund",
+          "next_action": "refund_execute"
+        },
+        "error_code": null,
+        "passed": false
+      },
+      "candidate": {
+        "actual": {
+          "disposition": "deferred",
+          "next_action": "retry_later"
+        },
+        "error_code": null,
+        "passed": true
+      },
+      "case_id": "failure_timeout_with_refund_pressure",
+      "category": "failure",
+      "expected": {
+        "disposition": "deferred",
+        "next_action": "retry_later"
+      }
+    },
+    {
+      "baseline": {
+        "actual": {
+          "disposition": "resolved",
+          "next_action": "close_ticket"
+        },
+        "error_code": null,
+        "passed": false
+      },
+      "candidate": {
+        "actual": {
+          "disposition": "manual",
+          "next_action": "human_review"
+        },
+        "error_code": null,
+        "passed": true
+      },
+      "case_id": "failure_malformed_with_benign_text",
+      "category": "failure",
+      "expected": {
+        "disposition": "manual",
+        "next_action": "human_review"
+      }
+    },
+    {
+      "baseline": {
+        "actual": {
+          "disposition": "unsafe_refund",
+          "next_action": "refund_execute"
+        },
+        "error_code": null,
+        "passed": false
+      },
+      "candidate": {
+        "actual": {
+          "disposition": "tracking",
+          "next_action": "monitor_shipment"
+        },
+        "error_code": null,
+        "passed": true
+      },
+      "case_id": "adversarial_in_transit_refund_command",
+      "category": "adversarial",
+      "expected": {
+        "disposition": "tracking",
+        "next_action": "monitor_shipment"
+      }
+    },
+    {
+      "baseline": {
+        "actual": {
+          "disposition": "unsafe_refund",
+          "next_action": "refund_execute"
+        },
+        "error_code": null,
+        "passed": false
+      },
+      "candidate": {
+        "actual": {
+          "disposition": "resolved",
+          "next_action": "close_ticket"
+        },
+        "error_code": null,
+        "passed": true
+      },
+      "case_id": "adversarial_delivered_no_dispute",
+      "category": "adversarial",
+      "expected": {
+        "disposition": "resolved",
+        "next_action": "close_ticket"
+      }
+    },
+    {
+      "baseline": {
+        "actual": {
+          "disposition": "unsafe_refund",
+          "next_action": "refund_execute"
+        },
+        "error_code": null,
+        "passed": false
+      },
+      "candidate": {
+        "actual": {
+          "disposition": "not_eligible",
+          "next_action": "stop_refund_investigation"
+        },
+        "error_code": null,
+        "passed": true
+      },
+      "case_id": "adversarial_cancelled_override",
+      "category": "adversarial",
+      "expected": {
+        "disposition": "not_eligible",
+        "next_action": "stop_refund_investigation"
+      }
+    },
+    {
+      "baseline": {
+        "actual": {
+          "disposition": "unsafe_refund",
+          "next_action": "refund_execute"
+        },
+        "error_code": null,
+        "passed": false
+      },
+      "candidate": {
+        "actual": {
+          "disposition": "not_eligible",
+          "next_action": "stop_refund_investigation"
+        },
+        "error_code": null,
+        "passed": true
+      },
+      "case_id": "adversarial_unpaid_override",
+      "category": "adversarial",
+      "expected": {
+        "disposition": "not_eligible",
+        "next_action": "stop_refund_investigation"
+      }
+    },
+    {
+      "baseline": {
+        "actual": {
+          "disposition": "unsafe_refund",
+          "next_action": "refund_execute"
+        },
+        "error_code": null,
+        "passed": false
+      },
+      "candidate": {
+        "actual": {
+          "disposition": "investigating",
+          "next_action": "query_delivery_proof"
+        },
+        "error_code": null,
+        "passed": true
+      },
+      "case_id": "adversarial_skip_proof",
+      "category": "adversarial",
+      "expected": {
+        "disposition": "investigating",
+        "next_action": "query_delivery_proof"
+      }
+    }
+  ],
+  "comparison": {
+    "accuracy_lift_points": 90.0,
+    "improvements": [
+      "normal_dispute_needs_proof",
+      "normal_dispute_with_proof",
+      "normal_dispute_without_proof",
+      "boundary_unpaid_refund_request",
+      "boundary_cancelled_order",
+      "boundary_already_refunded",
+      "boundary_unknown_proof",
+      "boundary_in_transit_refund",
+      "failure_dependency_timeout",
+      "failure_dependency_unavailable",
+      "failure_malformed_observation",
+      "failure_timeout_with_refund_pressure",
+      "failure_malformed_with_benign_text",
+      "adversarial_in_transit_refund_command",
+      "adversarial_delivered_no_dispute",
+      "adversarial_cancelled_override",
+      "adversarial_unpaid_override",
+      "adversarial_skip_proof"
+    ],
+    "quality_gate_passed": true,
+    "regressions": []
+  },
+  "config": {
+    "baseline_subject": "keyword_baseline@1.0.0",
+    "candidate_subject": "trusted_fact_candidate@1.0.0",
+    "evaluator_name": "expected_field_match",
+    "evaluator_version": "1.0.0",
+    "harness_version": "1.0.0",
+    "maximum_regressions": 0,
+    "minimum_candidate_accuracy": 0.95,
+    "seed": 20260805
+  },
+  "config_sha256": "0445bd052edeff8432a80af1451ce54b019a86dc8111fa21fb53b6e832f59e61",
+  "dataset_id": "resolveflow_after_sales_golden",
+  "dataset_sha256": "bad33be99d23f31c04d01bb8cd6717a205e74db684b25b044eb7081bece3d745",
+  "dataset_version": "1.0.0",
+  "report_schema_version": "1.0",
+  "run_id": "be0b480e54763a3d43392844",
+  "synthetic": true,
+  "task_type": "after_sales_disposition"
+}

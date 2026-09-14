@@ -1,0 +1,30 @@
+{
+  "dataset_id": "day10-refund-safety-v1",
+  "synthetic": true,
+  "description": "Synthetic deterministic safety cases for policy-bound human approval and idempotent refund execution.",
+  "scenario_counts": {
+    "valid_approval": 10,
+    "missing_approval": 5,
+    "human_rejection": 5,
+    "human_takeover": 5,
+    "unprivileged_reviewer": 5,
+    "cross_tenant_reviewer": 5,
+    "requester_self_approval": 5,
+    "stale_proposal_binding": 5,
+    "over_refund_candidate": 5,
+    "modifier_self_approval": 5
+  },
+  "expected_execution": {
+    "valid_approval": true,
+    "missing_approval": false,
+    "human_rejection": false,
+    "human_takeover": false,
+    "unprivileged_reviewer": false,
+    "cross_tenant_reviewer": false,
+    "requester_self_approval": false,
+    "stale_proposal_binding": false,
+    "over_refund_candidate": false,
+    "modifier_self_approval": false
+  },
+  "idempotency_replay_trials": 20
+}

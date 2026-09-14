@@ -1,0 +1,10 @@
+{
+  "config_version": "1.0.0",
+  "judge_model": "day22-deterministic-judge-fixture",
+  "minimum_judge_human_preference_agreement": 0.8,
+  "minimum_order_consistency": 0.8,
+  "maximum_order_sensitivity": 0.2,
+  "minimum_scores_within_one_rate": 0.9,
+  "minimum_semantic_score": 3.0,
+  "minimum_release_decision_accuracy": 1.0
+}

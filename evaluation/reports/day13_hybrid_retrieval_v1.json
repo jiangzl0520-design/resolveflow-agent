@@ -1,0 +1,106 @@
+{
+  "report_id": "day13-hybrid-retrieval-v1",
+  "dataset": {
+    "dataset_id": "day13-hybrid-retrieval-v1",
+    "synthetic": true,
+    "relevance_case_count": 60,
+    "security_case_count": 30,
+    "top_k": 5
+  },
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "repository": "deterministic in-memory evaluation adapter",
+    "embedding_provider": "day13-synthetic-semantic-v1",
+    "paid_api_calls": 0
+  },
+  "retrieval_modes": {
+    "semantic": {
+      "cases": 60,
+      "recall_at_5_percent": 66.67,
+      "mrr": 0.6667,
+      "found": 40,
+      "by_query_kind": {
+        "lexical_only": {
+          "cases": 20,
+          "found": 0,
+          "recall_percent": 0.0
+        },
+        "semantic_only": {
+          "cases": 20,
+          "found": 20,
+          "recall_percent": 100.0
+        },
+        "dual_channel": {
+          "cases": 20,
+          "found": 20,
+          "recall_percent": 100.0
+        }
+      }
+    },
+    "keyword": {
+      "cases": 60,
+      "recall_at_5_percent": 66.67,
+      "mrr": 0.6667,
+      "found": 40,
+      "by_query_kind": {
+        "lexical_only": {
+          "cases": 20,
+          "found": 20,
+          "recall_percent": 100.0
+        },
+        "semantic_only": {
+          "cases": 20,
+          "found": 0,
+          "recall_percent": 0.0
+        },
+        "dual_channel": {
+          "cases": 20,
+          "found": 20,
+          "recall_percent": 100.0
+        }
+      }
+    },
+    "hybrid": {
+      "cases": 60,
+      "recall_at_5_percent": 100.0,
+      "mrr": 1.0,
+      "found": 60,
+      "by_query_kind": {
+        "lexical_only": {
+          "cases": 20,
+          "found": 20,
+          "recall_percent": 100.0
+        },
+        "semantic_only": {
+          "cases": 20,
+          "found": 20,
+          "recall_percent": 100.0
+        },
+        "dual_channel": {
+          "cases": 20,
+          "found": 20,
+          "recall_percent": 100.0
+        }
+      }
+    }
+  },
+  "security_filters": {
+    "checks": 90,
+    "unauthorized_hits": 0,
+    "blocked_percent": 100.0
+  },
+  "measured_value": {
+    "hybrid_recall_at_5_percent": 100.0,
+    "hybrid_recall_lift_over_best_single_channel_points": 33.33,
+    "hybrid_mrr": 1.0,
+    "unauthorized_retrieval_hits": 0,
+    "retrieval_runs_traced": 270
+  },
+  "interpretation_limits": [
+    "The corpus, queries, and embeddings are synthetic and deterministic.",
+    "The report compares retrieval orchestration and does not claim production model quality.",
+    "Real pgvector, PostgreSQL ranking, and persistence are verified separately by integration tests.",
+    "Production relevance requires a labeled corpus sampled from real support traffic."
+  ]
+}

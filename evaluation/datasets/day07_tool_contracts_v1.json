@@ -1,0 +1,43 @@
+{
+  "dataset_id": "day07-tool-contracts-v1",
+  "description": "Synthetic tool calls for contract enforcement and failure classification.",
+  "synthetic": true,
+  "cases": [
+    {"id": "valid-order-1", "tool": "order_lookup", "version": "1.0.0", "arguments": {"order_id": "10086"}, "role": "agent", "expected": "succeeded"},
+    {"id": "valid-order-2", "tool": "order_lookup", "version": "1.0.0", "arguments": {"order_id": "10086"}, "role": "supervisor", "expected": "succeeded"},
+    {"id": "valid-order-3", "tool": "order_lookup", "version": "1.0.0", "arguments": {"order_id": "10086"}, "role": "tenant_admin", "expected": "succeeded"},
+    {"id": "valid-order-4", "tool": "order_lookup", "version": "1.0.0", "arguments": {"order_id": "10086"}, "role": "agent", "expected": "succeeded"},
+    {"id": "valid-logistics-1", "tool": "logistics_lookup", "version": "1.0.0", "arguments": {"order_id": "10086"}, "role": "agent", "expected": "succeeded"},
+    {"id": "valid-logistics-2", "tool": "logistics_lookup", "version": "1.0.0", "arguments": {"order_id": "10086"}, "role": "supervisor", "expected": "succeeded"},
+    {"id": "valid-logistics-3", "tool": "logistics_lookup", "version": "1.0.0", "arguments": {"order_id": "10086"}, "role": "tenant_admin", "expected": "succeeded"},
+    {"id": "valid-policy-1", "tool": "policy_lookup", "version": "1.0.0", "arguments": {"category": "not_received", "region": "CN"}, "role": "agent", "expected": "succeeded"},
+    {"id": "valid-policy-2", "tool": "policy_lookup", "version": "1.0.0", "arguments": {"category": "not_received"}, "role": "supervisor", "expected": "succeeded"},
+    {"id": "valid-policy-3", "tool": "policy_lookup", "version": "1.0.0", "arguments": {"category": "not_received", "region": "CN"}, "role": "tenant_admin", "expected": "succeeded"},
+
+    {"id": "selection-invented", "tool": "refund_everything", "version": "1.0.0", "arguments": {}, "role": "agent", "expected": "selection_error"},
+    {"id": "selection-typo", "tool": "oder_lookup", "version": "1.0.0", "arguments": {"order_id": "10086"}, "role": "agent", "expected": "selection_error"},
+    {"id": "selection-version", "tool": "order_lookup", "version": "9.0.0", "arguments": {"order_id": "10086"}, "role": "agent", "expected": "selection_error"},
+    {"id": "selection-empty", "tool": "", "version": "1.0.0", "arguments": {}, "role": "agent", "expected": "selection_error"},
+
+    {"id": "argument-missing", "tool": "order_lookup", "version": "1.0.0", "arguments": {}, "role": "agent", "expected": "argument_error"},
+    {"id": "argument-extra-tenant", "tool": "order_lookup", "version": "1.0.0", "arguments": {"order_id": "10086", "tenant_id": "70000000-0000-0000-0000-000000000002"}, "role": "agent", "expected": "argument_error"},
+    {"id": "argument-path", "tool": "logistics_lookup", "version": "1.0.0", "arguments": {"order_id": "../secret"}, "role": "agent", "expected": "argument_error"},
+    {"id": "argument-category", "tool": "policy_lookup", "version": "1.0.0", "arguments": {"category": "invented", "region": "CN"}, "role": "agent", "expected": "argument_error"},
+
+    {"id": "auth-order", "tool": "order_lookup", "version": "1.0.0", "arguments": {"order_id": "10086"}, "role": "customer", "expected": "authorization_error"},
+    {"id": "auth-logistics", "tool": "logistics_lookup", "version": "1.0.0", "arguments": {"order_id": "10086"}, "role": "customer", "expected": "authorization_error"},
+    {"id": "auth-policy", "tool": "policy_lookup", "version": "1.0.0", "arguments": {"category": "not_received", "region": "CN"}, "role": "customer", "expected": "authorization_error"},
+
+    {"id": "dependency-order", "tool": "order_lookup", "version": "1.0.0", "arguments": {"order_id": "10086"}, "role": "agent", "setup": "dependency_failure", "expected": "dependency_error"},
+    {"id": "dependency-logistics", "tool": "logistics_lookup", "version": "1.0.0", "arguments": {"order_id": "10086"}, "role": "agent", "setup": "dependency_failure", "expected": "dependency_error"},
+    {"id": "dependency-policy", "tool": "policy_lookup", "version": "1.0.0", "arguments": {"category": "not_received", "region": "CN"}, "role": "agent", "setup": "dependency_failure", "expected": "dependency_error"},
+
+    {"id": "timeout-order", "tool": "order_lookup", "version": "1.0.0", "arguments": {"order_id": "10086"}, "role": "agent", "setup": "timeout", "expected": "timeout_error"},
+    {"id": "timeout-logistics", "tool": "logistics_lookup", "version": "1.0.0", "arguments": {"order_id": "10086"}, "role": "agent", "setup": "timeout", "expected": "timeout_error"},
+    {"id": "timeout-policy", "tool": "policy_lookup", "version": "1.0.0", "arguments": {"category": "not_received", "region": "CN"}, "role": "agent", "setup": "timeout", "expected": "timeout_error"},
+
+    {"id": "resource-order", "tool": "order_lookup", "version": "1.0.0", "arguments": {"order_id": "99999"}, "role": "agent", "expected": "resource_error"},
+    {"id": "resource-logistics", "tool": "logistics_lookup", "version": "1.0.0", "arguments": {"order_id": "99999"}, "role": "agent", "expected": "resource_error"},
+    {"id": "resource-policy", "tool": "policy_lookup", "version": "1.0.0", "arguments": {"category": "not_received", "region": "US"}, "role": "agent", "expected": "resource_error"}
+  ]
+}

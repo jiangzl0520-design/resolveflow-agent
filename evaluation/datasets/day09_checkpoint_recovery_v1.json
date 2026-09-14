@@ -1,0 +1,14 @@
+{
+  "dataset_id": "day09-checkpoint-recovery-v1",
+  "description": "Synthetic process-restart cases comparing full re-execution with checkpoint resume after the first successful tool.",
+  "synthetic": true,
+  "scenario_counts": {
+    "cancelled_order": 15,
+    "delivered_with_proof": 15
+  },
+  "interruption_point": "after_first_successful_order_lookup",
+  "expected_outcomes": {
+    "cancelled_order": "no_refundable_payment",
+    "delivered_with_proof": "human_review_required"
+  }
+}

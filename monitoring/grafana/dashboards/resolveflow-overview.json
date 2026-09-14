@@ -1,0 +1,26 @@
+{
+  "annotations": {"list": []},
+  "editable": false,
+  "graphTooltip": 1,
+  "panels": [
+    {"type":"row","title":"Technical health","gridPos":{"h":1,"w":24,"x":0,"y":0},"id":1},
+    {"type":"stat","title":"Agent success rate","id":2,"gridPos":{"h":6,"w":6,"x":0,"y":1},"targets":[{"expr":"sum(rate(resolveflow_agent_runs_total{status=\"completed\"}[$__rate_interval])) / sum(rate(resolveflow_agent_runs_total[$__rate_interval]))","legendFormat":"success"}],"fieldConfig":{"defaults":{"unit":"percentunit","min":0,"max":1}}},
+    {"type":"timeseries","title":"Failures by domain","id":3,"gridPos":{"h":6,"w":9,"x":6,"y":1},"targets":[{"expr":"sum by (failure_domain) (rate(resolveflow_agent_runs_total{status!=\"completed\"}[$__rate_interval]))","legendFormat":"{{failure_domain}}"}]},
+    {"type":"timeseries","title":"Tool failures by kind","id":4,"gridPos":{"h":6,"w":9,"x":15,"y":1},"targets":[{"expr":"sum by (tool,error_kind) (rate(resolveflow_tool_calls_total{status=\"failed\"}[$__rate_interval]))","legendFormat":"{{tool}} / {{error_kind}}"}]},
+    {"type":"timeseries","title":"HTTP p95 latency","id":5,"gridPos":{"h":6,"w":8,"x":0,"y":7},"targets":[{"expr":"histogram_quantile(0.95, sum by (le,route) (rate(resolveflow_http_request_duration_seconds_bucket[$__rate_interval])))","legendFormat":"{{route}}"}],"fieldConfig":{"defaults":{"unit":"s"}}},
+    {"type":"timeseries","title":"LLM calls by result","id":6,"gridPos":{"h":6,"w":8,"x":8,"y":7},"targets":[{"expr":"sum by (status,error_code) (rate(resolveflow_llm_calls_total[$__rate_interval]))","legendFormat":"{{status}} / {{error_code}}"}]},
+    {"type":"timeseries","title":"Agent token rate","id":7,"gridPos":{"h":6,"w":8,"x":16,"y":7},"targets":[{"expr":"sum by (direction) (rate(resolveflow_agent_tokens_total[$__rate_interval]))","legendFormat":"{{direction}}"}]},
+    {"type":"row","title":"Business outcomes (not system health)","gridPos":{"h":1,"w":24,"x":0,"y":13},"id":8},
+    {"type":"timeseries","title":"Human escalations","id":9,"gridPos":{"h":6,"w":12,"x":0,"y":14},"targets":[{"expr":"sum by (reason) (rate(resolveflow_business_human_escalations_total[$__rate_interval]))","legendFormat":"{{reason}}"}]},
+    {"type":"timeseries","title":"Refund policy decisions","id":10,"gridPos":{"h":6,"w":12,"x":12,"y":14},"targets":[{"expr":"sum by (decision,code) (rate(resolveflow_business_policy_decisions_total[$__rate_interval]))","legendFormat":"{{decision}} / {{code}}"}]}
+  ],
+  "refresh": "10s",
+  "schemaVersion": 41,
+  "tags": ["resolveflow", "agent", "slo"],
+  "templating": {"list": []},
+  "time": {"from": "now-6h", "to": "now"},
+  "timezone": "browser",
+  "title": "ResolveFlow Agent Operations",
+  "uid": "resolveflow-agent-ops",
+  "version": 1
+}

@@ -1,0 +1,23 @@
+{
+  "dataset_id": "day19_incident_diagnosis_v1",
+  "data_kind": "synthetic_aggregate_windows",
+  "sample_size": 200,
+  "baseline": {
+    "method": "success_rate_without_failure_domain",
+    "detects_drop": true,
+    "top_failure_domain": "unknown",
+    "correct_cause": false
+  },
+  "final": {
+    "method": "low_cardinality_failure_domain_metrics",
+    "baseline_success_rate": 0.95,
+    "current_success_rate": 0.7,
+    "success_rate_change_percentage_points": -25.0,
+    "top_failure_domain": "tool",
+    "top_failure_count": 20,
+    "attributed_failure_share": 0.6667,
+    "correct_cause": true
+  },
+  "value_statement": "The aggregate baseline detects a 25-point regression but cannot explain it; the final metric contract attributes 20 of 30 failures (66.67%) to tools.",
+  "production_claim": false
+}
